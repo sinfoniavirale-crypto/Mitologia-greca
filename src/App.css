@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+
+:root {
+  --ink: #2b2013;
+  --ink-soft: #4a3d29;
+  --parchment: #f3ead3;
+  --parchment-deep: #e9dcb8;
+  --night: #10182b;
+  --night-deep: #0a0f1e;
+  --gold: #b8934b;
+  --gold-bright: #d4b06a;
+  --line: #b8a077;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--night-deep);
+}
+
+.book-app {
+  min-height: 100vh;
+  font-family: "Crimson Pro", Georgia, serif;
+  color: var(--ink);
+}
+
+/* ---------- COPERTINA ---------- */
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 20%, #1a2440 0%, var(--night) 55%, var(--night-deep) 100%);
+  padding: 32px 20px;
+}
+
+.cover-frame {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid rgba(184, 147, 75, 0.45);
+  padding: 48px 28px;
+  text-align: center;
+  position: relative;
+}
+
+.cover-frame::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(184, 147, 75, 0.25);
+  pointer-events: none;
+}
+
+.cover-ornament {
+  color: var(--gold-bright);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.cover-eyebrow {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  margin: 0 0 28px;
+  font-style: italic;
+}
+
+.cover-title {
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  color: #f4ecd8;
+  font-size: 42px;
+  line-height: 1.25;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.cover-rule {
+  width: 64px;
+  height: 1px;
+  background: var(--gold);
+  margin: 32px auto;
+}
+
+.cover-button {
+  font-family: "Cinzel", serif;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold-bright);
+  padding: 14px 32px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.cover-button:active {
+  background: rgba(184, 147, 75, 0.15);
+}
+
+/* ---------- PAGINA (contenitore comune) ---------- */
+
+.page-shell {
+  min-height: 100vh;
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--parchment);
+  padding: 40px 24px 90px;
+  animation: page-in 0.25s ease-out;
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- SOMMARIO ---------- */
+
+.toc-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.toc-eyebrow {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+}
+
+.toc-title {
+  font-family: "Cinzel", serif;
+  font-size: 26px;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.toc-part {
+  margin-bottom: 30px;
+}
+
+.toc-part-label {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.toc-part-title {
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 2px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc-entry {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 17px;
+  color: var(--ink);
+  padding: 9px 2px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.toc-entry-title {
+  white-space: nowrap;
+}
+
+.toc-entry-dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--line);
+  height: 10px;
+}
+
+/* ---------- VOCE / PAGINA DI CONTENUTO ---------- */
+
+.voce-kicker {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  margin: 0 0 4px;
+}
+
+.voce-title {
+  font-family: "Cinzel", serif;
+  font-size: 34px;
+  margin: 0 0 6px;
+}
+
+.voce-subtitle {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 18px;
+  margin: 0;
+}
+
+.voce-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 20px 0 24px;
+}
+
+.voce-intro {
+  font-size: 19px;
+  line-height: 1.6;
+  margin: 0 0 28px;
+}
+
+.voce-section {
+  margin-bottom: 26px;
+}
+
+.voce-heading {
+  font-family: "Cinzel", serif;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+  margin: 0 0 12px;
+}
+
+.voce-section p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+
+.voce-symbols {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.voce-symbols li {
+  border: 1px solid var(--line);
+  padding: 8px 14px;
+  font-size: 16px;
+}
+
+.voce-empty {
+  border: 1px dashed var(--line);
+  padding: 28px 20px;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.voce-empty-sub {
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+/* ---------- NAVIGAZIONE PAGINA ---------- */
+
+.page-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--parchment-deep);
+  border-top: 1px solid var(--line);
+  padding: 12px 14px;
+}
+
+.page-nav-link {
+  background: none;
+  border: none;
+  font-family: "Crimson Pro", serif;
+  font-size: 14px;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 6px 4px;
+}
+
+.page-nav-link:disabled {
+  opacity: 0.3;
+}
+
+.page-nav-center {
+  font-family: "Cinzel", serif;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+}
