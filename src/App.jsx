@@ -39,7 +39,7 @@ function Sommario({ onSelect }) {
             <ul className="toc-list">
               {parte.voci.map((voce) => (
                 <li key={voce.id}>
-                  <button className="toc-entry" onClick={() => onSelect(voce.id)}>
+                  <button className="toc-entry" onClick={() => onSelect(voce.id, "start")}>
                     <span className="toc-entry-title">{voce.title}</span>
                     <span className="toc-entry-dots" aria-hidden="true" />
                   </button>
@@ -53,11 +53,64 @@ function Sommario({ onSelect }) {
   );
 }
 
-function Voce({ id, onSelect, onSommario }) {
+// Rende il contenuto "vecchio formato" (intro + sections) su un'unica pagina.
+function LegacyBody({ body }) {
+  return (
+    <>
+      {body.subtitle && <p className="voce-subtitle">{body.subtitle}</p>}
+      <div className="voce-divider" aria-hidden="true" />
+      {body.intro && <p className="voce-intro">{body.intro}</p>}
+      {body.sections?.map((sec) => (
+        <section className="voce-section" key={sec.heading}>
+          <h2 className="voce-heading">{sec.heading}</h2>
+          {sec.heading === "Simboli" ? (
+            <ul className="voce-symbols">
+              {sec.text.split("\n").map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </ul>
+          ) : (
+            sec.text.split("\n\n").map((para, i) => <p key={i}>{para}</p>)
+          )}
+        </section>
+      ))}
+    </>
+  );
+}
+
+// Rende una singola pagina del "nuovo formato" (capitolo lungo, pages: [...]).
+function ChapterPage({ body, pageIndex }) {
+  const page = body.pages[pageIndex];
+  return (
+    <>
+      {pageIndex === 0 && body.subtitle && (
+        <>
+          <p className="voce-subtitle">{body.subtitle}</p>
+          <div className="voce-divider" aria-hidden="true" />
+        </>
+      )}
+      {page.heading && <h2 className="voce-heading">{page.heading}</h2>}
+      {page.paragraphs?.map((para, i) => (
+        <p key={i} className="voce-page-paragraph">
+          {para}
+        </p>
+      ))}
+    </>
+  );
+}
+
+function Voce({ id, startAt, onSelect, onSommario }) {
   const voce = getVoce(id);
+  const isChapter = Array.isArray(voce?.body?.pages);
+  const totalPages = isChapter ? voce.body.pages.length : 1;
+
+  const [pageIndex, setPageIndex] = useState(
+    isChapter && startAt === "end" ? totalPages - 1 : 0
+  );
+
   const index = flatToc.findIndex((v) => v.id === id);
-  const prev = index > 0 ? flatToc[index - 1] : null;
-  const next = index < flatToc.length - 1 ? flatToc[index + 1] : null;
+  const prevVoce = index > 0 ? flatToc[index - 1] : null;
+  const nextVoce = index < flatToc.length - 1 ? flatToc[index + 1] : null;
 
   if (!voce) {
     return (
@@ -70,35 +123,45 @@ function Voce({ id, onSelect, onSommario }) {
     );
   }
 
+  const canGoPrevPage = isChapter && pageIndex > 0;
+  const canGoNextPage = isChapter && pageIndex < totalPages - 1;
+
+  const handlePrev = () => {
+    if (canGoPrevPage) {
+      setPageIndex((p) => p - 1);
+    } else if (prevVoce) {
+      onSelect(prevVoce.id, "end");
+    }
+  };
+
+  const handleNext = () => {
+    if (canGoNextPage) {
+      setPageIndex((p) => p + 1);
+    } else if (nextVoce) {
+      onSelect(nextVoce.id, "start");
+    }
+  };
+
   return (
-    <article className="page-shell voce-page" key={id}>
+    <article className="page-shell voce-page">
       <p className="voce-kicker">
         {voce.part} — {voce.partTitle}
       </p>
 
       <h1 className="voce-title">{voce.title}</h1>
 
-      {voce.body ? (
-        <>
-          {voce.body.subtitle && <p className="voce-subtitle">{voce.body.subtitle}</p>}
-          <div className="voce-divider" aria-hidden="true" />
-          {voce.body.intro && <p className="voce-intro">{voce.body.intro}</p>}
+      {isChapter && (
+        <p className="voce-progress">
+          Pagina {pageIndex + 1} di {totalPages}
+        </p>
+      )}
 
-          {voce.body.sections?.map((sec) => (
-            <section className="voce-section" key={sec.heading}>
-              <h2 className="voce-heading">{sec.heading}</h2>
-              {sec.heading === "Simboli" ? (
-                <ul className="voce-symbols">
-                  {sec.text.split("\n").map((line) => (
-                    <li key={line}>{line}</li>
-                  ))}
-                </ul>
-              ) : (
-                sec.text.split("\n\n").map((para, i) => <p key={i}>{para}</p>)
-              )}
-            </section>
-          ))}
-        </>
+      {voce.body ? (
+        isChapter ? (
+          <ChapterPage body={voce.body} pageIndex={pageIndex} />
+        ) : (
+          <LegacyBody body={voce.body} />
+        )
       ) : (
         <div className="voce-empty">
           <p>Questa pagina è ancora in preparazione.</p>
@@ -109,8 +172,8 @@ function Voce({ id, onSelect, onSommario }) {
       <nav className="page-nav">
         <button
           className="page-nav-link"
-          disabled={!prev}
-          onClick={() => prev && onSelect(prev.id)}
+          disabled={!canGoPrevPage && !prevVoce}
+          onClick={handlePrev}
         >
           ← Pagina precedente
         </button>
@@ -119,8 +182,8 @@ function Voce({ id, onSelect, onSommario }) {
         </button>
         <button
           className="page-nav-link"
-          disabled={!next}
-          onClick={() => next && onSelect(next.id)}
+          disabled={!canGoNextPage && !nextVoce}
+          onClick={handleNext}
         >
           Pagina successiva →
         </button>
@@ -132,10 +195,12 @@ function Voce({ id, onSelect, onSommario }) {
 export default function App() {
   const [view, setView] = useState("cover"); // cover | toc | voce
   const [currentId, setCurrentId] = useState(null);
+  const [startAt, setStartAt] = useState("start");
 
   const goToSommario = () => setView("toc");
-  const openVoce = (id) => {
+  const openVoce = (id, edge = "start") => {
     setCurrentId(id);
+    setStartAt(edge);
     setView("voce");
   };
 
@@ -144,7 +209,13 @@ export default function App() {
       {view === "cover" && <Cover onOpen={goToSommario} />}
       {view === "toc" && <Sommario onSelect={openVoce} />}
       {view === "voce" && (
-        <Voce id={currentId} onSelect={openVoce} onSommario={goToSommario} />
+        <Voce
+          key={currentId}
+          id={currentId}
+          startAt={startAt}
+          onSelect={openVoce}
+          onSommario={goToSommario}
+        />
       )}
     </div>
   );
