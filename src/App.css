@@ -214,6 +214,7 @@ body {
   font-size: 34px;
   margin: 0 0 6px;
 }
+
 .voce-progress {
   font-size: 13px;
   color: var(--ink-soft);
@@ -226,6 +227,7 @@ body {
   line-height: 1.75;
   margin: 0 0 16px;
 }
+
 .voce-subtitle {
   font-style: italic;
   color: var(--ink-soft);
@@ -294,20 +296,51 @@ body {
   margin-top: 8px;
 }
 
-/* ---------- NAVIGAZIONE PAGINA ---------- */
+/* ---------- LETTURA VOCALE + NAVIGAZIONE (fisse in fondo) ---------- */
 
-.page-nav {
+.speak-bar-spacer {
+  height: 116px;
+}
+
+.nav-only-spacer {
+  height: 60px;
+}
+
+.page-footer {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   max-width: 640px;
   margin: 0 auto;
+  background: var(--parchment-deep);
+  border-top: 1px solid var(--line);
+}
+
+.speak-button {
+  display: block;
+  width: 100%;
+  font-family: "Cinzel", serif;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  padding: 14px 18px;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.speak-button:active {
+  background: rgba(184, 147, 75, 0.25);
+}
+
+/* ---------- NAVIGAZIONE PAGINA ---------- */
+
+.page-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--parchment-deep);
-  border-top: 1px solid var(--line);
   padding: 12px 14px;
 }
 
