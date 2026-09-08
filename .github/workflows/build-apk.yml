@@ -70,4 +70,20 @@ jobs:
           sed -i "s/versionCode 1/versionCode ${{ github.run_number }}/" android/app/build.gradle
           sed -i "s/versionName \"1.0\"/versionName \"1.0.${{ github.run_number }}\"/" android/app/build.gradle
 
-      -
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
+
+      - name: Build APK
+        run: cd android && ./gradlew assembleDebug
+
+      - name: Verify APK signature (diagnostica)
+        run: |
+          echo "=== IMPRONTA DELLA FIRMA SULL'APK FINALE ==="
+          APKSIGNER=$(find $ANDROID_HOME -name "apksigner" | head -1)
+          "$APKSIGNER" verify --print-certs android/app/build/outputs/apk/debug/app-debug.apk || echo "apksigner non trovato o verifica fallita"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: mitologia-greca-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
