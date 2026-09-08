@@ -2,7 +2,7 @@
 // Ogni elemento di "pages" è una schermata: { heading, paragraphs: [...] }
 
 export const content = {
-  caos: {
+  "il-caos": {
     subtitle: "Il vuoto primordiale, l'abisso insondabile e l'origine di ogni cosa esistente",
     pages: [
       {
