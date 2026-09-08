@@ -1,4 +1,4 @@
-export const content: {
+export const content = {
   odisseo: {
     subtitle: "L'eroe dell'ingegno, del viaggio e della nostalgia del ritorno",
     pages: [
