@@ -1,4 +1,4 @@
-// IL CAOS — capitolo completo (Parte I)
+// IL CAOS — capitolo completo ed espanso
 // Ogni elemento di "pages" è una schermata: { heading, paragraphs: [...] }
 
 export const content = {
@@ -201,6 +201,13 @@ export const content = {
           "Si apre ora il grande capitolo dedicato a Gaia, la madre universale che avrebbe nutrito nel suo grembo le meraviglie e i conflitti delle prime generazioni divine.",
         ],
       },
-    ],
-  },
+      {
+        heading: "L'eterno inizio",
+        paragraphs: [
+          "Così il cerchio si chiude e al tempo stesso si apre, lasciando dietro di sé il ricordo indelebile di ciò che c'era prima che qualsiasi forma prendesse vita nello spazio infinito.",
+          "Un pilastro fondamentale su cui poggia l'intera architettura dei miti greci, pronto a essere sfogliato schermata dopo schermata esattamente come la storia del re dell'Olimpo.",
+        ],
+      }
+    ]
+  }
 };
