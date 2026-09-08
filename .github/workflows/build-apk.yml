@@ -28,6 +28,11 @@ jobs:
           mkdir -p ~/.android
           cp debug.keystore ~/.android/debug.keystore
 
+      - name: Verify keystore fingerprint (diagnostica)
+        run: |
+          echo "=== IMPRONTA DEL KEYSTORE USATO PER FIRMARE ==="
+          keytool -list -v -keystore ~/.android/debug.keystore -storepass android -alias androiddebugkey | grep -A1 "SHA256:"
+
       - name: Install dependencies
         run: npm install
 
@@ -50,6 +55,12 @@ jobs:
 
       - name: Build APK
         run: cd android && ./gradlew assembleDebug
+
+      - name: Verify APK signature (diagnostica)
+        run: |
+          echo "=== IMPRONTA DELLA FIRMA SULL'APK FINALE ==="
+          APKSIGNER=$(find $ANDROID_HOME -name "apksigner" | head -1)
+          "$APKSIGNER" verify --print-certs android/app/build/outputs/apk/debug/app-debug.apk || echo "apksigner non trovato o verifica fallita"
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
