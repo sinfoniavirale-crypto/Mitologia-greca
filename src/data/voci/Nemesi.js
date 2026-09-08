@@ -1,4 +1,4 @@
-export content = {
+export const content = {
   nemesi: {
     subtitle: "Dea della giustizia distributiva e della vendetta divina",
     pages: [
