@@ -1,5 +1,5 @@
 export const content = {
-  erinni: {
+  "le-erinni" : {
     subtitle: "Le dee della vendetta implacabile e custodi della giustizia di sangue",
     pages: [
       {
