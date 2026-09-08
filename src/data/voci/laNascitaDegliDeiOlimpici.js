@@ -1,5 +1,5 @@
 export const content = {
-  laNascitaDegliDeiOlimpici: {
+  "la-nascita-dei-olimpici" : {
     subtitle: "Il conflitto cosmico della Titanomachia e l'istituzione del nuovo ordine sul monte Olimpo",
     pages: [
       {
