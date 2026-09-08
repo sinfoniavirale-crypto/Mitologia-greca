@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { TextToSpeech } from "@capacitor-community/text-to-speech";
 import { toc, flatToc, getVoce } from "./data/index.js";
 import "./App.css";
 
@@ -99,6 +100,27 @@ function ChapterPage({ body, pageIndex }) {
   );
 }
 
+// Estrae il testo semplice della pagina/voce corrente, da leggere ad alta voce.
+function getReadableText(voce, isChapter, pageIndex) {
+  if (!voce.body) return "";
+  if (isChapter) {
+    const page = voce.body.pages[pageIndex];
+    const parts = [];
+    if (pageIndex === 0 && voce.body.subtitle) parts.push(voce.body.subtitle);
+    if (page.heading) parts.push(page.heading);
+    if (page.paragraphs) parts.push(...page.paragraphs);
+    return parts.join(". ");
+  }
+  const parts = [];
+  if (voce.body.subtitle) parts.push(voce.body.subtitle);
+  if (voce.body.intro) parts.push(voce.body.intro);
+  voce.body.sections?.forEach((sec) => {
+    parts.push(sec.heading);
+    parts.push(sec.text.replace(/\n/g, ". "));
+  });
+  return parts.join(". ");
+}
+
 function Voce({ id, startAt, onSelect, onSommario }) {
   const voce = getVoce(id);
   const isChapter = Array.isArray(voce?.body?.pages);
@@ -107,10 +129,18 @@ function Voce({ id, startAt, onSelect, onSommario }) {
   const [pageIndex, setPageIndex] = useState(
     isChapter && startAt === "end" ? totalPages - 1 : 0
   );
+  const [isSpeaking, setIsSpeaking] = useState(false);
 
   const index = flatToc.findIndex((v) => v.id === id);
   const prevVoce = index > 0 ? flatToc[index - 1] : null;
   const nextVoce = index < flatToc.length - 1 ? flatToc[index + 1] : null;
+
+  // Ferma la lettura ogni volta che si cambia pagina o si esce dalla voce.
+  useEffect(() => {
+    return () => {
+      TextToSpeech.stop().catch(() => {});
+    };
+  }, [id, pageIndex]);
 
   if (!voce) {
     return (
@@ -142,6 +172,29 @@ function Voce({ id, startAt, onSelect, onSommario }) {
     }
   };
 
+  const handleSpeak = async () => {
+    if (isSpeaking) {
+      await TextToSpeech.stop();
+      setIsSpeaking(false);
+      return;
+    }
+    const text = getReadableText(voce, isChapter, pageIndex);
+    if (!text) return;
+    setIsSpeaking(true);
+    try {
+      await TextToSpeech.speak({
+        text,
+        lang: "it-IT",
+        rate: 1.0,
+        pitch: 1.0,
+        volume: 1.0,
+        category: "ambient",
+      });
+    } finally {
+      setIsSpeaking(false);
+    }
+  };
+
   return (
     <article className="page-shell voce-page">
       <p className="voce-kicker">
@@ -169,25 +222,34 @@ function Voce({ id, startAt, onSelect, onSommario }) {
         </div>
       )}
 
-      <nav className="page-nav">
-        <button
-          className="page-nav-link"
-          disabled={!canGoPrevPage && !prevVoce}
-          onClick={handlePrev}
-        >
-          ← Pagina precedente
-        </button>
-        <button className="page-nav-link page-nav-center" onClick={onSommario}>
-          Sommario
-        </button>
-        <button
-          className="page-nav-link"
-          disabled={!canGoNextPage && !nextVoce}
-          onClick={handleNext}
-        >
-          Pagina successiva →
-        </button>
-      </nav>
+      <div className={voce.body ? "speak-bar-spacer" : "nav-only-spacer"} />
+
+      <div className="page-footer">
+        {voce.body && (
+          <button className="speak-button" onClick={handleSpeak}>
+            {isSpeaking ? "⏹ Ferma lettura" : "🔊 Ascolta questa pagina"}
+          </button>
+        )}
+        <nav className="page-nav">
+          <button
+            className="page-nav-link"
+            disabled={!canGoPrevPage && !prevVoce}
+            onClick={handlePrev}
+          >
+            ← Pagina precedente
+          </button>
+          <button className="page-nav-link page-nav-center" onClick={onSommario}>
+            Sommario
+          </button>
+          <button
+            className="page-nav-link"
+            disabled={!canGoNextPage && !nextVoce}
+            onClick={handleNext}
+          >
+            Pagina successiva →
+          </button>
+        </nav>
+      </div>
     </article>
   );
 }
