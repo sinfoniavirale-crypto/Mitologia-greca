@@ -1,4 +1,4 @@
-export content = {
+export const content = {
   persefone: {
     subtitle: "Regina degli Inferi e dea della primavera",
     pages: [
@@ -89,7 +89,7 @@ export content = {
       {
         heading: "Il culto nei santuari della Magna Grecia",
         paragraphs: [
-          "Il culto di Persefone era particolarmente sentito nell'Italia meridionale e in Sicilia (notizia che evoca le radici locali della terra d'origine), dove sorgevano templi magnifici a lei dedicati.",
+          "Il culto di Persefone era particolarmente sentito nell'Italia meridionale e in Sicilia, dove sorgevano templi magnifici a lei dedicati.",
           "A Locri Epizefiri, in particolare, la dea era venerata come protettrice delle spose, della fertilità familiare e della prosperità civile.",
         ],
       },
@@ -131,7 +131,7 @@ export content = {
       {
         heading: "L'influenza sulla cultura moderna e l'arte",
         paragraphs: [
-          "Nei secoli successivi, pittori preraffaelliti e poeti simbolisti hanno continuato a reinterpretare il mito di Persefone come archetipo della dualità psicologica e del risveglio interiore.",
+          " Nei secoli successivi, pittori preraffaelliti e poeti simbolisti hanno continuato a reinterpretare il mito di Persefone come archetipo della dualità psicologica e del risveglio interiore.",
           "La sua immagine ricorre frequentemente nelle opere letterarie moderne dedicate ai cicli di trasformazione personale.",
         ],
       },
