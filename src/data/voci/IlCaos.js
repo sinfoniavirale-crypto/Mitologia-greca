@@ -1,4 +1,4 @@
-// IL CAOS — capitolo completo ed espanso
+// IL CAOS — capitolo completo (Parte I)
 // Ogni elemento di "pages" è una schermata: { heading, paragraphs: [...] }
 
 export const content = {
@@ -178,6 +178,27 @@ export const content = {
         paragraphs: [
           "Riassumere il mito del Caos significava per i Greci riconoscere la grandezza vertiginosa di un'origine che sfuggiva a qualsiasi comprensione puramente razionale, affidandosi alla potenza evocativa del racconto poetico.",
           "Un racconto che, attraverso i secoli, ha conservato intatta la sua forza suggestiva, ponendosi come il primo e più grande tentativo di spiegare il mistero dell'essere attraverso la forma immortale del mito.",
+        ],
+      },
+      {
+        heading: "Oltre l'orizzonte del visibile",
+        paragraphs: [
+          "Laddove finivano i racconti delle grandi guerre divine e delle vittorie olimpiche, i sapienti del mondo antico sapevano di dover volgere lo sguardo a quel primo, ineffabile istante di silenzio.",
+          "Poiché nessuna stirpe di re o di dèi avrebbe potuto esistere se l'abisso non avesse dischiuso le sue porte invisibili per lasciare spazio alla meraviglia dell'esistenza.",
+        ],
+      },
+      {
+        heading: "Il sigillo del principio",
+        paragraphs: [
+          "Si compiva così il ciclo narrativo del primo grande mistero cosmico, consegnato ai posteri non come una formula scientifica, ma come il più antico canto sulla nascita della realtà.",
+          "Un patrimonio di immagini e significati che continua a vivere ogni volta che un lettore apre le pagine dedicate alla favolosa e terribile infanzia del mondo.",
+        ],
+      },
+      {
+        heading: "Verso la terra di Gaia",
+        paragraphs: [
+          "Chiusa la pagina sul vuoto e sulle prime ombre dell'abisso, il cammino della narrazione mitologica è pronto a posarsi interamente sulla superficie solida e generatrice della terra.",
+          "Si apre ora il grande capitolo dedicato a Gaia, la madre universale che avrebbe nutrito nel suo grembo le meraviglie e i conflitti delle prime generazioni divine.",
         ],
       },
     ],
