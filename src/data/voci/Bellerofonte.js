@@ -1,4 +1,4 @@
-export content = {
+export const content = {
   bellerofonte: {
     subtitle: "L'eroe alato, domatore di Pegaso e vincitore della Chimera",
     pages: [
