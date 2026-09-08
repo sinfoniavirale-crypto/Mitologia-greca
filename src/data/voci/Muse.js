@@ -1,5 +1,5 @@
 export const content ={
-  muse: {
+  "le-muse" : {
     subtitle: "Le nove figlie di Zeus e Mnemosyne, ispiratrici di ogni arte e scienza",
     pages: [
       {
