@@ -1,5 +1,5 @@
 export const content = {
-  iTitani: {
+  "i-titani" : {
     subtitle: "La potente stirpe dei giganti divini che governò il cosmo nell'Età dell'Oro",
     pages: [
       {
