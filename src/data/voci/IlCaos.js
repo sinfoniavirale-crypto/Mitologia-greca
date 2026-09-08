@@ -1,208 +1,185 @@
+// IL CAOS — capitolo completo ed espanso
+// Ogni elemento di "pages" è una schermata: { heading, paragraphs: [...] }
+
 export const content = {
-  ilCaos: {
-    subtitle: "Il principio primordiale, l'abisso e il vuoto assoluto da cui tutto ebbe origine nella cosmogonia classica",
+  caos: {
+    subtitle: "Il vuoto primordiale, l'abisso insondabile e l'origine di ogni cosa esistente",
     pages: [
       {
-        heading: "Il significato originario e l'etimologia del termine",
+        heading: "Il silenzio prima del tempo",
         paragraphs: [
-          "Nella mitologia greca e nella cosmogonia esposta da Esiodo nella sua Teogonia, il Caos non indica il disordine confuso moderno.",
-          "Il termine deriva dal greco antico chaino, che significa 'spalancarsi', indicando una voragine immensa precedente a qualsiasi altra cosa.",
-          "Esso descrive un abisso oscuro che esisteva prima di qualsiasi altra entità materiale o divina.",
+          "Prima che il cielo si distendesse sopra la terra con la sua volta di stelle, prima che il mare trovasse i suoi confini battendo spumoso contro le scogliere, e molto prima che qualsiasi creatura mortale o immortale potesse respirare l'aria del mondo, non esisteva assolutamente nulla di ciò che l'uomo riconosce come realtà.",
+          "Nessun astro brillava nel buio profondo, nessun vento soffiava tra le rocce primordiali, nessun suono spezzava la quiete assoluta di uno spazio che non conosceva confini. Il tempo stesso non era stato ancora generato: non c'era un prima, non c'era un dopo, ma soltanto un eterno e immobile presente sospeso nel nulla.",
         ],
       },
       {
-        heading: "La prospettiva cosmogonica di Esiodo e dei poeti arcaici",
+        heading: "L'abisso smisurato",
         paragraphs: [
-          "Il poeta Esiodo colloca il Caos come la primissima entità assoluta della storia dell'universo, il punto zero da cui tutto muove.",
-          "Non si tratta di una divinità antropomorfa o di un culto attivo, bensì di una condizione cosmica originaria, impersonale e insondabile.",
-          "In questa fase arcaica, il Caos rappresenta l'impossibilità stessa di concepire uno spazio geometrico prima delle grandi potenze.",
+          "Al centro di questo non-essere si estendeva un vuoto immenso, un abisso smisurato, oscuro e silenzioso che i Greci antichi chiamavano con un nome destinato a rimanere immortale: il Caos.",
+          "È fondamentale comprendere che, nella concezione mitologica originaria, questo termine non indicava affatto il disordine confuso o la confusione turbolenta nel senso moderno della parola, bensì un grembo cosmico spalancato, uno spazio illimitato e profondo che conteneva in potenza ogni materia, ogni forma e ogni futuro destino dell'universo.",
         ],
       },
       {
-        heading: "L'emersione spontanea delle prime forze elementari",
+        heading: "La matrice invisibile",
         paragraphs: [
-          "Dal seno di questo vuoto immenso e oscuro iniziarono a coagularsi e a manifestarsi spontaneamente le prime grandi potenze.",
-          "Subito dopo il Caos, infatti, emersero senza unione sessuale Gea la Terra, il Tartaro sotterraneo ed Eros come forza propulsiva.",
-          "Queste entità non vengono generate biologicamente, ma si palesano come la strutturazione spontanea dell'essere a partire dall'abisso.",
+          "Nel Caos originario non esistevano punti di riferimento: non vi era un alto né un basso, non vi era un peso che potesse precipitare né una leggerezza che potesse librarsi. Tutto vi era sospeso in una quiete densa, informe e gravida di un potenziale misterioso e inimmaginabile.",
+          "Era la matrice invisibile e oscura da cui, per un impulso spontaneo e irrefrenabile della natura profonda dell'essere, avrebbero iniziato a staccarsi le prime forze fondamentali destinate a dare forma e stabilità al cosmo.",
         ],
       },
       {
-        heading: "La discesa dell'Erebo e della Notte primordiale",
+        heading: "La necessità di una forma",
         paragraphs: [
-          "Dal Caos stesso discesero direttamente le prime tenebre profonde dell'Erebo sotterraneo e della Notte Nyx.",
-          "Queste divinità oscure generarono a loro volta l'Etere celeste e il Giorno luminoso, creando un intreccio tra luce e buio.",
-          "L'alternanza tra queste forze stabilisce i primi ritmi fondamentali che caratterizzeranno la vita dell'universo.",
+          "Il vuoto infinito non poteva rimanere eternamente sterile. La natura stessa dell'esistenza, racchiusa in potenza nelle viscere del Caos, spingeva irresistibilmente verso la differenziazione, verso la nascita di elementi stabili che potessero contrapporsi all'infinito nulla.",
+          "Fu così che, per una transizione misteriosa e irripetibile, le prime entità divine cominciarono a condensarsi direttamente dal tessuto impalpabile dell'abisso, rompendo l'uniformità primordiale e inaugurando la storia sacra dell'universo.",
         ],
       },
       {
-        heading: "L'evoluzione del concetto nella filosofia presocratica",
+        heading: "La solidità della Terra",
         paragraphs: [
-          "Con il passare dei secoli, i filosofi presocratici iniziarono a rileggere il concetto esiodeo alla luce delle teorie naturalistiche.",
-          "Il termine Caos subì uno slittamento semantico, allontanandosi dall'idea di 'spazio vuoto' per avvicinarsi alla materia informe.",
-          "Questa materia primordiale era concepita come un ammasso turbolento in attesa di essere ordinato da un principio razionale.",
+          "La prima grande forza a consolidarsi e a emergere con un corpo stabile fu Gaia, la Terra dai fianchi ampi, solida, sicura, incrollabile e feconda, destinata a diventare la base eterna di ogni cosa che avrebbe preso vita.",
+          "Gaia non era semplicemente il suolo roccioso o il terreno calpestato dai futuri viventi, ma una presenza immensa e cosciente, il fondamento stabile su cui si sarebbero poggiati gli dèi immortali, gli uomini mortali e tutte le meraviglie del creato.",
         ],
       },
       {
-        heading: "La visione poetica e metamorfica di Ovidio",
+        heading: "Il Tartaro profondo",
         paragraphs: [
-          "Nelle Metamorfosi, Ovidio descrive il Caos in un modo che ha influenzato profondamente la cultura occidentale successiva.",
-          "Egli lo dipinge come una massa rozza, indigesta e discordante di semi non assortiti degli elementi universali.",
-          "In questa narrazione, gli elementi giacevano in uno stato di conflitto perenne prima dell'intervento ordinatore della natura.",
+          "Subito dopo la comparsa della Terra, un'altra voragine immensa si spalancò nelle profondità più remote, situata a una distanza calcolata pari a quella che intercorre tra la terra e il cielo: il Tartaro.",
+          "Un abisso cupo, freddo, tenebroso e inaccessibile, racchiuso ben sotto le radici stesse del mondo. Un luogo di buio denso e impenetrabile che, nei secoli successivi, avrebbe accolto come prigione definitiva le forze sconfitte del cosmos e i nemici del nuovo ordine divino.",
         ],
       },
       {
-        heading: "L'assenza assoluta di un culto religioso attivo",
+        heading: "La forza del desiderio",
         paragraphs: [
-          "A differenza delle divinità olimpiche, al Caos non furono mai dedicati templi, altari monumentali o sacrifici cruenti.",
-          "Essendo un principio cosmico superato dalla nascita del mondo organizzato, non poteva ricevere preghiere o offerte.",
-          "La sua presenza rimase confinata esclusivamente alla speculazione mitica, alla poesia teogonica e alla riflessione filosofica.",
+          "Ad affiancare la terra e l'abisso nella triade primordiale sorta dal Caos fu Eros, la potenza primordiale e irresistibile dell'attrazione, del desiderio e dell'amore cosmico.",
+          "Eros rappresentava la forza vitale che spezzava la rigidezza del vuoto, spingendo gli elementi sparsi e distanti a cercarsi, ad attrarsi e a fondersi l'uno con l'altro, inaugurando la dinamica feconda della generazione.",
         ],
       },
       {
-        heading: "Il simbolismo archetipico dell'abisso creatore",
+        heading: "Le potenze dell'ombra",
         paragraphs: [
-          "Sul piano psicologico e simbolico, il Caos rappresenta l'archetipo fondamentale del potenziale infinito e della pagina bianca.",
-          "Esso costituisce il grembo oscuro da cui ogni forma di vita, ordine e coscienza deve separarsi per esistere.",
-          "Senza la voragine iniziale del Caos, la pienezza e la complessità del Cosmo non avrebbero mai trovato spazio.",
+          "Mentre la terra e l'abisso prendevano forma, dal medesimo Caos originario trassero origine altre entità oscure e silenziose, destinate a popolare i confini estremi del mondo nascente.",
+          "Tra queste vi erano Erebo, l'oscurità impenetrabile che avvolge i recessi più nascosti sotto terra, e la Notte, avvolta nel suo mantello di ombre profonde, pronta a stendere il suo velo sopra la luce nascente.",
         ],
       },
       {
-        heading: "La separazione tra il vuoto e la materia strutturata",
+        heading: "I figli della Notte",
         paragraphs: [
-          "Il passaggio concettuale dal Caos alla creazione organizzata segna l'inizio effettivo della storia dell'universo e delle stirpi.",
-          "Questo distacco garantisce la stabilità delle fondamenta su cui poggeranno la terraferma, gli oceani e le dimore celesti.",
-          "L'abisso rimane tuttavia ai margini del mondo creato, come un confine invisibile che delimita la fragilità dell'ordine.",
+          "Dall'unione solitaria o combinata di queste potenze oscure sorsero a loro volta figure astratte ma di una potenza inaudita, destinate a governare la fragile condizione dei futuri viventi.",
+          "Nacquero così il Destino inflessibile, la Morte implacabile, il Sonno ristoratore, i Sogni ingannevoli, la sventura, il rimpianto e le personificazioni spietate della fatica e del dolore umano.",
         ],
       },
       {
-        heading: "Il legame profondo con le origini del pensiero",
+        heading: "Il distacco dall'origine",
         paragraphs: [
-          "I miti delle origini riflettevano il tentativo costante di spiegare il passaggio dal nulla assoluto alla ricchezza naturale.",
-          "Il Caos incarna la risposta poetica all'enigma fondamentale dell'esistenza: perché c'è qualcosa anziché il nulla?",
-          "Attraverso questa immagine, i poeti davano voce all'intuizione di un'origine misteriosa e insondabile del tutto.",
+          "Con la comparsa di queste prime stirpi divine, il Caos primordiale cessò gradualmente di essere l'unico protagonista dell'esistenza, trasformandosi nello sfondo invisibile, profondo e inaccessibile dell'universo.",
+          "Il mondo smetteva di essere un semplice vuoto informe per diventare un teatro dinamico di forze vive, pronte a scontrarsi, ad allearsi e a generare la complessa catena delle generazioni divine.",
         ],
       },
       {
-        heading: "La rappresentazione nei poemi e nella tragedia arcaica",
+        heading: "L'ordine contro il vuoto",
         paragraphs: [
-          "Nei testi antichi e nei cori tragici, la voragine del Caos viene evocata quando si vuole sottolineare la catastrofe.",
-          "Rappresenta il limite estremo oltre il quale la ragione umana non può spingersi senza smarrire i punti di riferimento.",
-          "La paura del ritorno al Caos è la paura ancestrale della dissoluzione totale delle leggi civili e naturali.",
+          "Il passaggio dal Caos informe alle strutture stabili della terra e del cielo segnò l'atto di nascita di quel concetto di 'Cosmo' che i Greci avrebbero sempre contrapposto al disordine primordiale.",
+          "Ogni divinità sorta dall'abisso portava con sé una funzione precisa, ponendo le basi per la complessa impalcatura mitologica che avrebbe condotto, attraverso lotte spaventose, all'armonia dell'Olimpo.",
         ],
       },
       {
-        heading: "L'eco del Caos nella cultura e nella scienza moderna",
+        heading: "Un'origine senza testimoni",
         paragraphs: [
-          "Il concetto antico ha continuato a esercitare un fascino duraturo sulla filosofia, sulla letteratura e sulla fisica.",
-          "L'idea di uno stato iniziale privo di differenziazioni trova risonanza nelle teorie scientifiche sull'espansione primordiale.",
-          "Il nome del Caos sopravvive come metafora universale della complessità e dell'imprevedibilità dei sistemi naturali.",
+          "Nessun mortale, per quanto saggio o antico, avrebbe mai potuto testimoniare direttamente la nascita del Caos, poiché l'umanità sarebbe apparsa solo molto tempo dopo, al termine di innumerevoli ere di trasformazioni cosmiche.",
+          "I poeti, i cantori e i sacerdoti tramandavano questi miti attingendo a una memoria sacra e rivelata, considerata un dono diretto delle Muse ispiratrici, figlie della memoria e di Zeus.",
         ],
       },
       {
-        heading: "La struttura semantica nei testi omerici ed esiodici",
+        heading: "Il mistero dell'inizio",
         paragraphs: [
-          "Sebbene in Omero il termine appaia con acfumature diverse legate alla profondità della terra, è con Esiodo che acquista statuto cosmogonico.",
-          "La codificazione esiodica fissa i parametri con cui la grecità classica interpreterà la genesi del reale.",
-          "Ogni successivo sistema filosofico dovrà confrontarsi con questa radice semantica fondativa.",
+          "Per la mentalità religiosa e filosofica della Grecia antica, il Caos rimaneva un confine invalicabile, il limite estremo e spaventoso oltre il quale la ragione umana e la stessa intelligenza degli dèi non potevano spingersi.",
+          "Esso ricordava costantemente a tutti gli esseri che l'ordine del mondo non era eterno per proprio diritto, ma rappresentava il frutto fragile e faticoso di un distacco originario dal nulla.",
         ],
       },
       {
-        heading: "Il confronto con le cosmogonie del Vicino Oriente",
+        heading: "L'eco del vuoto nei miti",
         paragraphs: [
-          "Gli studiosi hanno spesso accostato il Caos greco ai miti babilonesi di Tiamat e alle acque primordiali del Genesis.",
-          "Tuttavia, a differenza del mostro babilonese, il Caos greco conserva una natura astratta e originariamente non combattuta.",
-          "Questo carattere impersonale distingue nettamente la speculazione ellenica dai paralleli miti orientali.",
+          "La memoria del Caos non scomparve mai del tutto dai racconti mitologici; essa riaffiorava ogni volta che gli dèi scatenavano cataclismi capaci di minacciare le fondamenta stesse della terra e del cielo.",
+          "Ogni volta che la tempesta minacciava di travolgere l'Olimpo o che la terra tremava sotto i colpi dei giganti, il fantasma del vecchio abisso sembrava riaffacciarsi ai margini del mondo ordinato.",
         ],
       },
       {
-        heading: "La reinterpretazione neoplatonica dell'abisso",
+        heading: "La separazione degli elementi",
         paragraphs: [
-          "I filosofi neoplatonici rilessero ampiamente sulla natura del Caos inserendolo nella gerarchia delle emanazioni.",
-          "Per essi, il Caos rappresentava la materia prima assoluta, priva di qualsiasi forma ma recante in sé la ricettività del divino.",
-          "In questo modo l'antico mito veniva nobilitato e integrato nella speculazione metafisica avanzata.",
+          "Dall'indifferenziazione iniziale del Caos si passò progressivamente alla separazione netta degli elementi costitutivi della realtà: la terra solida in basso, le acque profonde che la circondavano, l'aria intermedia e il fuoco celeste.",
+          "Questa catalogazione mitica rifletteva il bisogno profondo della cultura greca di dare un senso logico, geometrico e morale alla struttura dell'universo conosciuto.",
         ],
       },
       {
-        heading: "Il Caos nella drammaturgia e nella lirica corale",
+        heading: "Il confronto con le altre cosmogonie",
         paragraphs: [
-          "I poeti lirici come Pindaro e Bacchilide evocano occasionalmente le forze abissali per sottolineare la fragilità umana.",
-          "La grandezza degli dèi e la caducità dell'uomo trovano nell'immensità del Caos il termine di paragone definitivo.",
-          "L'uomo antico avverte costantemente la vicinanza di questo baratro invisibile sotto i propri piedi.",
+          "Il mito greco del Caos condivideva con le grandi tradizioni del Vicino Oriente l'idea di un'origine acquatica o abissale, ma se ne distingueva per la limpidezza con cui poneva l'enfasi sulla nascita autonoma delle forme.",
+          "Non vi era un creatore trascendentale che plasmava la materia dall'esterno, ma una materia che, per forza propria e immanente, generava dal proprio grembo le potenze divine del mondo.",
         ],
       },
       {
-        heading: "L'influenza sull'immaginario fantastico medievale e rinascimentale",
+        heading: "Il significato simbolico",
         paragraphs: [
-          "Durante il Rinascimento, la riscoperta dei testi classici portò a una nuova fortuna letteraria del concetto di Caos.",
-          "Artisti e scrittori videro nell'abisso primordiale la metafora della creatività artistica e della Genesi.",
-          "I trattati alchemici ripresero l'idea di una materia prima caotica da cui estrarre la pietra filosofale.",
+          "Sul piano simbolico, il Caos rappresentava anche lo stato di potenziale inespresso che precede ogni grande atto creativo, sia esso la nascita di un mondo, di un'opera d'arte o di un nuovo ciclo storico.",
+          "Ogni volta che l'ordine stabilito si corrompeva o si esauriva, il mito suggeriva la necessità di un ritorno ideale alle origini per rigenerare le energie vitali del corpo sociale e politico.",
         ],
       },
       {
-        heading: "La critica razionalista e il superamento del mito",
+        heading: "Il confine tra essere e non-essere",
         paragraphs: [
-          "Con l'avvento dell'era moderna e l'ascesa del metodo scientifico, il mito del Caos fu progressivamente desacralizzato.",
-          "I filosofi illuministi videro nelle cosmogonie antiche tentativi poetici ingenui di spiegare la natura.",
-          "Tuttavia, il potere evocativo del termine rimase intatto nella grande letteratura romantica e simbolista.",
+          "Il grande merito del mito del Caos fu quello di definire con precisione il confine sottile che separa l'essere dal non-essere, l'esistenza concreta dal nulla informe che la circonda da ogni lato.",
+          "Un confine che gli dèi olimpici avevano il compito supremo di custodire e difendere, impedendo che le forze disgregatrici del vecchio abisso potessero riprendere il sopravvento sul creato.",
         ],
       },
       {
-        heading: "La dissoluzione dei confini e la vertigine dell'infinito",
+        heading: "La quiete primordiale",
         paragraphs: [
-          "Pensare il Caos significa sperimentare una vertigine intellettuale di fronte all'assenza di coordinate spaziali.",
-          "La mente umana, abituata a circoscrivere e definire, si scontra con l'impossibilità di visualizzare il vuoto assoluto.",
-          "Questa tensione alimenta da millenni la ricerca estetica del sublime nell'arte occidentale.",
+          "Nei testi dei poeti antichi, a volte si avvertiva quasi una sorta di nostalgia segreta per quella quiete immacolata e silenziosa che precedeva le fatiche, i dolori e le guerre sanguinarie del mondo civilizzato.",
+          "Un silenzio perfetto, privo di conflitti e di passioni, che era stato sacrificato per sempre sull'altare della vita, del movimento e della coscienza.",
         ],
       },
       {
-        heading: "Il rapporto dialettico indissolubile con il Kosmos",
+        heading: "L'eredità del vuoto",
         paragraphs: [
-          "Non vi sarebbe alcun concetto di Kosmos, inteso come ordine armonioso, senza la presenza speculare del Caos.",
-          "I due termini formano una coppia concettuale complementare che regge l'intera impalcatura del pensiero classico.",
-          "L'uno definisce i confini e la necessità vitale dell'altro in un equilibrio dinamico costante.",
+          "Il racconto del Caos rimane così la pietra angolare di tutta la mitologia greca, il prologo grandioso e spaventoso da cui prende le mosse l'intera epopea degli dèi e degli eroi.",
+          "Una pagina immortale che continua a interrogare l'immaginazione umana sull'enigma profondo della nostra provenienza e sulla miracolosa fragilità dell'ordine in cui viviamo.",
         ],
       },
       {
-        heading: "La percezione sensoriale dell'oscurità primordiale",
+        heading: "La stabilità del cosmo",
         paragraphs: [
-          "Nella letteratura antica, il Caos viene associato a un'oscurità densa, cieca e impenetrabile a qualsiasi raggio di luce.",
-          "Questa cecità sensoriale accentua il senso di smarrimento e di assoluta alienazione rispetto al mondo abitato.",
-          "È il regno del non-manifesto che precede ogni percezione visiva o tattile.",
+          "Consolidato il passaggio dal vuoto primordiale alle strutture stabili della terra e del cielo, il mondo poté finalmente accogliere le generazioni successive dei titani e delle divinità olimpiche.",
+          "Il Caos rimase confinato nei recessi invisibili dell'esistenza, ma la sua lezione rimase scolpita nella coscienza del mondo antico: l'ordine è una conquista continua che richiede forza, giustizia e vigilanza.",
         ],
       },
       {
-        heading: "La traccia del mito nella lingua e nella grammatica quotidiana",
+        heading: "La fine del primo atto",
         paragraphs: [
-          "Nel linguaggio comune contemporaneo, la parola 'caos' continua a indicare uno stato di confusione estrema.",
-          "Questo slittamento semantico testimonia la longevità di radici culturali millenarie profondamente radicate nel lessico.",
-          "Anche senza conoscerne la genealogia esiodica, ogni parlante evoca inconsapevolmente l'antico abisso.",
+          "Con la stabilizzazione delle forze primordiali e la nascita della Terra, dell'Abisso e dell'Amore, si concluse il prologo assoluto della storia cosmica raccontata dai Greci.",
+          "Si apriva ora il grande capitolo della parentela divina, dei matrimoni celesti e dei conflitti generazionali che avrebbero portato alla nascita del regno definitivo di Zeus e degli dèi dell'Olimpo.",
         ],
       },
       {
-        heading: "La prospettiva della psicoanalisi junghiana sull'abisso",
+        heading: "Il respiro dell'abisso",
         paragraphs: [
-          "Per la psicologia analitica di Carl Gustav Jung, il Caos corrisponde alle regioni più profonde dell'inconscio collettivo.",
-          "Esso rappresenta il regno caotico delle pulsioni e delle potenzialità psichiche non ancora integrate dall'Io.",
-          "Il processo di individuazione richiede il coraggio di esplorare questo Caos interiore per trarne ordine.",
+          "Anche nei momenti di massimo splendore dell'età degli dèi, i poeti ricordavano che sotto le fondamenta stabili della terra e sotto la custodia del Tartaro continuava a respirare l'ombra del vecchio abisso.",
+          "Un promemoria eterno della precarietà del potere e della grandezza misteriosa che circonda da ogni lato la breve esistenza dei mortali e la stessa potenza degli immortali.",
         ],
       },
       {
-        heading: "Il silenzio metafisico che precede la parola poetica",
+        heading: "L'eterno ritorno",
         paragraphs: [
-          "Prima che la musa ispiratrice detti il canto a Esiodo, esiste soltanto il silenzio sordo del Caos primordiale.",
-          "Ogni atto di creazione poetica o materiale costituisce una vittoria temporanea contro il silenzio del nulla.",
-          "Il poeta si fa tramite di questa transizione cruciale dall'abisso alla parola.",
+          "Nella visione ciclica del tempo propria del mondo antico, il Caos non rappresentava soltanto l'inizio assoluto, ma anche la possibile fine ultima verso cui l'universo avrebbe potuto precipitare in caso di totale rovina morale e cosmica.",
+          "Ecco perché ogni rito, ogni giuramento e ogni sacrificio offerto agli dèi dell'Olimpo aveva lo scopo supremo di rinnovare l'alleanza con la vita e di tenere lontano il ritorno del vuoto.",
         ],
       },
       {
-        heading: "La sintesi definitiva del principio originario",
+        heading: "La sintesi del principio",
         paragraphs: [
-          "In conclusione, il Caos è il pilastro invisibile ma essenziale su cui poggia l'intera impalcatura della mitologia greca.",
-          "La sua ombra misteriosa accompagna ogni racconto sulla nascita degli dèi e sulla strutturazione del mondo.",
-          "Esso rimane il simbolo eterno dell'infinito che precede la misura e la forma.",
+          "Riassumere il mito del Caos significava per i Greci riconoscere la grandezza vertiginosa di un'origine che sfuggiva a qualsiasi comprensione puramente razionale, affidandosi alla potenza evocativa del racconto poetico.",
+          "Un racconto che, attraverso i secoli, ha conservato intatta la sua forza suggestiva, ponendosi come il primo e più grande tentativo di spiegare il mistero dell'essere attraverso la forma immortale del mito.",
         ],
       },
     ],
   },
 };
-        
