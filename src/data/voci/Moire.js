@@ -1,4 +1,4 @@
-export content = {
+export const content = {
   moire: {
     subtitle: "Le tre figlie della Notte, implacabili tessitrici del destino umano e divino",
     pages: [
