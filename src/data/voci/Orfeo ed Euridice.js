@@ -187,8 +187,3 @@ export const content = {
     ],
   },
 };
-
-      * ... [proseguimento delle pagine successive fino a completare la struttura richiesta per Orfeo ed Euridice]
-    ]
-  }
-};
