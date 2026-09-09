@@ -50,7 +50,7 @@ export const content = {
           "Durante il suo ritorno a Itaca, Odisseo si trovò a navigare esattamente tra le grinfie di Cariddi e Scilla, con il cuore stretto dal terrore.",
           "Mentre le sei teste di Scilla ghermivano sei dei suoi compagni dalla parte opposta, la sua nave passò vicina al punto in cui Cariddi stava bevendo il mare.",
         ],
-      6},
+      },
       {
         heading: "Il risucchio della nave",
         paragraphs: [
