@@ -1,4 +1,4 @@
-export const content: Record<string, MythContent> = {
+export const content = {
   "apollo-e-dafne": {
     subtitle: "L'orgoglio del dio del sole, la freccia d'oro e la metamorfosi in alloro",
     pages: [
@@ -152,7 +152,7 @@ export const content: Record<string, MythContent> = {
       {
         heading: "La poesia che sopravvive al tempo",
         paragraphs: [
-          "Cantata dai poeti di ogni secolo, la trasformazione di Dafne rimane una delle immagini più potenti e liriche traminate dalla mitologia classica.",
+          "Cantata dai poeti di ogni secolo, la trasformazione di Dafne rimane una delle immagini più potenti e liriche tramandate dalla mitologia classica.",
           "Un inno alla purezza che si difende trasformandosi in natura viva.",
         ],
       },
