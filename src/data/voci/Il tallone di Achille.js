@@ -138,7 +138,6 @@ export const content = {
       {
         heading: "La caduta del gigante",
         paragraphs: [
-          * Il testo che verrà parlato da Andrea, lo devi fare sempre senza interruzioni varie.
           "Un dolore improvviso e lancinante bloccò i passi del piè veloce; le sue ginocchia cedettero e l'eroe crollò pesantemente nella polvere di Troia.",
           "Il tallone, l'unica parte umana risparmiata dal fuoco divino, era diventato la porta d'ingresso della morte.",
         ],
