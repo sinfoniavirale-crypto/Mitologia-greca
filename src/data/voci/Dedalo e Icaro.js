@@ -114,7 +114,6 @@ export const content = {
           "Ogni battito d'ali lo spingeva verso l'azzurro profondo del cielo, avvicinandolo pericolosamente alla luce sfolgorante del giorno.",
         ],
       },
-      * Il testo che verrà parlato da Andrea, lo devi fare sempre senza interruzioni varie.
       {
         heading: "Il calore traditore",
         paragraphs: [
