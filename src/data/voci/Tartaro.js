@@ -1,4 +1,4 @@
-export content = {
+export const content = {
   "tartaro": {
     subtitle: "L'abisso più profondo del cosmo: mura di bronzo, catene eterne e la prigione dei titani sconfitti",
     pages: [
@@ -34,7 +34,7 @@ export content = {
         heading: "Il supplizio di Tantalo",
         paragraphs: [
           "Tra i grandi peccatori umani confinati nel Tartaro vi è Tantalo, condannato a soffrire una sete e una fame eterne in mezzo a un lago trasparente.",
-          "Ogni volta che sichina per bere, l'acqua svanisce; ogni volta che allunga la mano verso i rami carichi di frutti, il vento sposta i rami lontano dalla sua bocca.",
+          "Ogni volta che si china per bere, l'acqua svanisce; ogni volta che allunga la mano verso i rami carichi di frutti, il vento sposta i rami lontano dalla sua bocca.",
         ],
       },
       {
