@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { TextToSpeech } from "@capacitor-community/text-to-speech";
 import { toc, flatToc, getVoce } from "./data/index.js";
 import "./App.css";
@@ -130,17 +130,19 @@ function Voce({ id, startAt, onSelect, onSommario }) {
     isChapter && startAt === "end" ? totalPages - 1 : 0
   );
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const autoPlayRef = useRef(false);
 
   const index = flatToc.findIndex((v) => v.id === id);
   const prevVoce = index > 0 ? flatToc[index - 1] : null;
   const nextVoce = index < flatToc.length - 1 ? flatToc[index + 1] : null;
 
-  // Ferma la lettura ogni volta che si cambia pagina o si esce dalla voce.
+  // Ferma la lettura quando si esce del tutto da questa voce.
   useEffect(() => {
     return () => {
+      autoPlayRef.current = false;
       TextToSpeech.stop().catch(() => {});
     };
-  }, [id, pageIndex]);
+  }, [id]);
 
   if (!voce) {
     return (
@@ -156,7 +158,14 @@ function Voce({ id, startAt, onSelect, onSommario }) {
   const canGoPrevPage = isChapter && pageIndex > 0;
   const canGoNextPage = isChapter && pageIndex < totalPages - 1;
 
-  const handlePrev = () => {
+  const stopSpeaking = async () => {
+    autoPlayRef.current = false;
+    await TextToSpeech.stop().catch(() => {});
+    setIsSpeaking(false);
+  };
+
+  const handlePrev = async () => {
+    if (isSpeaking) await stopSpeaking();
     if (canGoPrevPage) {
       setPageIndex((p) => p - 1);
     } else if (prevVoce) {
@@ -164,7 +173,8 @@ function Voce({ id, startAt, onSelect, onSommario }) {
     }
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
+    if (isSpeaking) await stopSpeaking();
     if (canGoNextPage) {
       setPageIndex((p) => p + 1);
     } else if (nextVoce) {
@@ -172,14 +182,14 @@ function Voce({ id, startAt, onSelect, onSommario }) {
     }
   };
 
-  const handleSpeak = async () => {
-    if (isSpeaking) {
-      await TextToSpeech.stop();
-      setIsSpeaking(false);
+  // Legge una pagina e, se siamo in modalità lettura continua, passa da
+  // sola alla pagina successiva finché non finisce il capitolo.
+  const speakPage = async (pIndex) => {
+    const text = getReadableText(voce, isChapter, pIndex);
+    if (!text) {
+      autoPlayRef.current = false;
       return;
     }
-    const text = getReadableText(voce, isChapter, pageIndex);
-    if (!text) return;
     setIsSpeaking(true);
     try {
       await TextToSpeech.speak({
@@ -190,9 +200,27 @@ function Voce({ id, startAt, onSelect, onSommario }) {
         volume: 1.0,
         category: "ambient",
       });
-    } finally {
-      setIsSpeaking(false);
+    } catch (e) {
+      // interrotta manualmente o errore: nessuna azione necessaria
     }
+    setIsSpeaking(false);
+
+    if (autoPlayRef.current && isChapter && pIndex < totalPages - 1) {
+      const next = pIndex + 1;
+      setPageIndex(next);
+      speakPage(next);
+    } else {
+      autoPlayRef.current = false;
+    }
+  };
+
+  const handleSpeak = async () => {
+    if (isSpeaking) {
+      await stopSpeaking();
+      return;
+    }
+    autoPlayRef.current = true;
+    speakPage(pageIndex);
   };
 
   return (
@@ -227,7 +255,7 @@ function Voce({ id, startAt, onSelect, onSommario }) {
       <div className="page-footer">
         {voce.body && (
           <button className="speak-button" onClick={handleSpeak}>
-            {isSpeaking ? "⏹ Ferma lettura" : "🔊 Ascolta questa pagina"}
+            {isSpeaking ? "⏹ Ferma lettura" : "🔊 Ascolta (avanza da sola)"}
           </button>
         )}
         <nav className="page-nav">
