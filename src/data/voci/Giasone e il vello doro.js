@@ -33,7 +33,7 @@ export const content = {
       {
         heading: "La costruzione della nave Argo",
         paragraphs: [
-          * Il testo che verrà parlato da Andrea, lo devi fare sempre senza interruzioni varie.
+      
           "Accettata la sfida con coraggio, Giasone radunò i più grandi eroi e semidei della Grecia, affidando al maestro costruttore Argo la realizzazione di una nave senza eguali.",
           "Nacque così la celebre nave Argo, dotata di cinquanta remi e costruita con il legno magico del bosco di Dodona, capace persino di parlare e profetizzare il futuro.",
         ],
