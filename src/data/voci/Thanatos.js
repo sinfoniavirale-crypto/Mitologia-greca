@@ -1,5 +1,5 @@
 export default {
-  id: "thanatos",
+  thanatos : {
   titolo: "Thanatos",
   categoria: "I Grandi Miti",
   sommario: "Studio approfondito su Thanatos: la genealogia primordiale, la percezione della morte nella Grecia antica, i miti di Sisifo e Admeto, e il confronto con le Keres.",
