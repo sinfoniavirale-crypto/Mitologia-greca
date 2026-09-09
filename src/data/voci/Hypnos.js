@@ -1,5 +1,5 @@
 export default {
-  id: "hypnos",
+  hypnos : {
   titolo: "Hypnos",
   categoria: "I Grandi Miti",
   sommario: "Analisi approfondita di Hypnos: la geografia dei sogni nella grotta ai confini del mondo, la discendenza degli Oneiroi, e il monumentale inganno ordito contro Zeus nell'Iliade.",
