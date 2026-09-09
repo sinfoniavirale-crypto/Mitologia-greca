@@ -1,147 +1,125 @@
 export const hypnos = {
   id: "hypnos",
-  titolo: "Hypnos",
-  categoria: "Gli Altri Dèi e le Divinità",
-  sommario: "Il signore del sonno e dei sogni nella mitologia greca: una divinità pacifica e potente, capace di addormentare persino il re degli dèi.",
+  titolo: "Hypnos: La Geografia dei Sogni e il Potere sul Cosmo",
+  categoria: "Gli Altri Dèi e la Divinità",
+  sommario: "Studio enciclopedico approfondito su Hypnos: la cosmologia della grotta dei Cimmeri, la tassonomia complessa degli Oneiroi (Morfeo, Fobetore, Fantaso), l'analisi filologica della Dolonia omerica e l'impatto del sonno nella filosofia antica.",
   contenuto: [
     {
-      tipo: "paragrafo",
-      testo: "Hypnos (Ὕπνος) rappresenta nella mitologia e nella poesia greca non soltanto il riposo biologico, ma una dimensione liminale e salvifica in cui la mente umana si distacca dalle afflizioni del mondo reale per vagare in territori dominati dal mistero e dalla profezia. Divinità antichissima, figlio di Nyx (la Notte) e fratello gemello di Thanatos, Hypnos incarna quella dolce tregua che permette agli esseri viventi di ricaricare le proprie energie fisiche e spirituali."
+      tipo: "sottotitolo",
+      testo: "1. Introduzione: La duplice natura del Sonno nella cultura greca"
     },
     {
       tipo: "paragrafo",
-      testo: "A differenza del fratello, la cui visita è definitiva, Hypnos è il dio che ritorna ogni notte, una presenza benevola invocata nei canti e nelle preghiere dei poeti. Tuttavia, la sua potenza non deve essere sottovalutata: il sonno è un sovrano assoluto che governa indistintamente su tutti i mortali e persino sulle divinità più potenti del pantheon."
+      testo: "Nella complessa tassonomia delle potenze divine elleniche, Hypnos (Ὕπνος) occupa un posto di assoluto rilievo, collocandosi a metà strada tra la fisiologia biologica e la metafisica della divinazione. Se Thanatos rappresenta la stasi definitiva, Hypnos incarna la rigenerazione temporanea, la tregua quotidiana concessa agli affanni mortali e la soglia liminale attraverso cui la psiche umana si affaccia sul mondo misterioso e ineffabile dei sogni. Per i Greci, il sonno non era semplicemente uno stato di inattività cerebrale, bensì un vero e proprio dio che visitava gli uomini ogni notte, avvolgendoli nel suo mantello invisibile."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "La potenza di Hypnos non conosce discriminazioni di rango: egli governa con eguale autorità sui pastori umili che riposano dopo la fienagione e sui re più potenti, arrivando persino a soggiogare, nei momenti di suprema tensione mitologica, le divinità immortali dell'Olimpo. Questa universalità del suo potere rende Hypnos una figura ambivalente: dolce e salvifica quando dona ristoro ai corpi stanchi, potenzialmente sovversiva e pericolosa quando i suoi poteri vengono manipolati per scopi d'inganno politico o cosmico."
     },
     {
       tipo: "sottotitolo",
-      testo: "La geografia sacra del Sonno: la grotta dei Cimmeri"
+      testo: "2. Genealogia e fraternità con Thanatos"
     },
     {
       tipo: "paragrafo",
-      testo: "La dimora di Hypnos, descritta con toni barocchi e visionari da Ovidio nel libro XI delle 'Metamorfosi' e ripresa da Stazio, è uno dei luoghi più suggestivi dell'immaginario mitologico classico. Si trova in una profonda cavità sotterranea situata nelle terre remote e nebbiose del popolo dei Cimmeri, un luogo dove il sole non sorge né tramonta mai e regna una penombra perenne."
+      testo: "Figlio primogenito di Nyx (la Notte) e generato secondo la tradizione esiodea senza l'apporto di una controparte maschile — oppure unitamente a Erebo —, Hypnos condivide con il gemello Thanatos la stessa matrice oscura e primordiale. I poeti antichi amavano insistere sulla perfetta simmetria fisica e morale dei due fratelli: nell'iconografia vascolare essi compaiono spesso affiancati, due giovani efebi alati che sollevano con infinita delicatezza i corpi dei caduti o dei dormienti."
     },
     {
       tipo: "paragrafo",
-      testo: "All'interno di questa grotta non vi sono porte, cardini o guardiani che possano produrre scricchiolii o rumori molesti. Il pavimento è cosparso di papaveri e piante dalle proprietà soporifere, dai cui succhi stillati la Notte ricava il liquido che induce l'assuefazione e il riposo. Al centro della caverna scorre placido il fiume Lete (l'Oblio), le cui acque scorrono su pietre levigate emettendo un fruscio monotono e ipnotico, ideale per conciliare il torpore. Dal soffitto della grotta pendono nebbie e vapori pesanti che avvolgono ogni cosa in un silenzio tombale."
+      testo: "Tuttavia, la distinzione funzionale tra di essi è netta: mentre Thanatos strappa recisamente il filo della vita e conduce nel regno sotterraneo di Ade senza ritorno, Hypnos agisce come un traghettatore provvisorio. La sua visita notturna è un prestito che la morte fa alla vita, una simulazione temporanea del trapasso che permette all'essere umano di rinascere ogni mattina con nuove forze."
     },
     {
       tipo: "sottotitolo",
-      testo: "Gli Oneiroi: la discendenza dei sogni"
+      testo: "3. La geografia sacra e visionaria: La grotta dei Cimmeri"
     },
     {
       tipo: "paragrafo",
-      testo: "Dall'unione di Hypnos con Pasitea (una delle Grazie) o generati autonomamente dal dio insieme alla Notte, nacquero gli **Oneiroi**, gli spiriti che popolano la dimensione onirica. Omero e i poeti successivi distinguevano diverse categorie di sogni, suddividendoli in base alla loro veridicità e alla porta da cui uscivano (la porta di corno per i sogni veritieri, la porta d'avorio per quelli ingannevoli)."
+      testo: "La dimora di Hypnos è descritta dalla letteratura classica con un lusso di dettagli barocchi e visionari che non ha eguali nel mito greco, culminando nella celeberrima descrizione fornita da Ovidio nel libro XI delle 'Metamorfosi' e ripresa successivamente da Stazio nella 'Tebaide'. Il palazzo del Sonno non sorge sull'Olimpo luminoso e soleggiato, bensì in una regione remota, buia e inospitale situata ai confini estremi della terra conosciuta, nel territorio nebbioso del mitico popolo dei Cimmeri."
     },
     {
       tipo: "paragrafo",
-      testo: "Tra i figli di Hypnos spiccano figure straordinarie:"
+      testo: "La residenza del dio è una vasta grotta scavata nelle viscere di una montagna profonda, un luogo in cui i raggi del sole — sia all'alba che al tramonto o allo zenit — non riescono mai a penetrare, regnando una penombra perpetua fatta di vapori densi e fuliggine d'ombra. All'interno di questa caverna regna una quiete assoluta, un silenzio così profondo che la lingua umana fatica a descriverlo: non vi sono porte all'ingresso, né cardini che possano scricchiolare, né cani da guardia che possano abbaiare o bestie feroci che possano ruggire."
     },
     {
       tipo: "paragrafo",
-      testo: "• **Morfeo**: il più famoso e potente degli Oneiroi, maestro nel mutare forma e nell'apparire nei sogni dei mortali assumendo sembianze umane credibili, sia di persone care che di figure autorevoli."
+      testo: "Dal pavimento della caverna non spuntano alberi fruttiferi o fiori colorati, ma sterminati tappeti di papaveri e piante dalle spiccate proprietà soporifere e narcotiche. Dalle radici di queste piante, la Notte estrae i succhi concentrati che stillano goccia a goccia per indurre il torpore universale. Al centro esatto della grotta scorre silenzioso e placido il fiume Lete (l'Oblio): le sue acque non emettono gorgoglii violenti, ma scivolano su ciottoli levigati producendo un fruscio monotono, ipnotico e soporifero, ideale per cullare la coscienza e cancellare la memoria delle fatiche diurne."
     },
     {
       tipo: "paragrafo",
-      testo: "• **Fobetore** (chiamato Icelo dagli dèi): lo spirito che assume le sembianze di animali feroci, serpenti o mostri spaventosi per generare gli incubi."
-    },
-    {
-      tipo: "paragrafo",
-      testo: "• **Fantaso**: colui che crea le visioni fantastiche, inanimate o surreali, popolando i sogni di rocce, acqua, alberi e oggetti impossibili."
+      testo: "Al centro della sala principale sorge un letto monumentale imbottito di piumino nero, circondato da cortine scure, dove il dio riposa incessantemente circondato dai suoi innumerevoli figli."
     },
     {
       tipo: "sottotitolo",
-      testo: "L'inganno supremo a Zeus: il racconto dell'Iliade"
+      testo: "4. Gli Oneiroi: La complessa tassonomia dei Sogni"
     },
     {
       tipo: "paragrafo",
-      testo: "Il momento culminante della mitologia di Hypnos si registra nel XIV libro dell'Iliade di Omero, un episodio noto come la *Dolonia* o l'inganno di Zeus (Διὸς ἀπάτη). Durante la Guerra di Troia, gli Achei versavano in condizioni disperate perché il re degli dèi, schierato sulle cime del monte Ida, sorvegliava attentamente lo scontro per assicurarsi che i Troiani prevalessero, impedendo qualsiasi interferenza da parte di Era e Atena."
+      testo: "Dall'unione di Hypnos con Pasitea — una delle tre Grazie minori, concessa al dio come pegno d'amore — o generati direttamente dal dio insieme alla Notte, nacque una progenie sterminata nota come gli **Oneiroi** (gli Spiriti dei Sogni). I Greci attribuivano un'immensa importanza ai sogni, considerandoli spesso messaggi divini, vaticini sul futuro o manifestazioni di potenze occulte. Omero, nell'Odissea, introduce la celebre distinzione delle due porte attraverso cui i sogni emergono per raggiungere gli uomini: la porta di corno per i sogni veritieri (che si avverano puntualmente) e la porta d'avorio per i sogni ingannevoli (destinati a fuorviare i mortali)."
     },
     {
       tipo: "paragrafo",
-      testo: "Era, furiosa per la piega che la guerra stava prendendo, ideò un piano audace: sedurre Zeus per poi affidarsi a Hypnos e indurre il re dell'Olimpo a un sonno profondo. La dea si recò personalmente da Hypnos implorando il suo intervento. Inizialmente il dio del sonno rifiutò categoricamente, ricordando agli dèi la memorabile arrabbiatura di Zeus avvenuta tempo prima: in quell'occasione, su richiesta sempre di Era, Hypnos aveva addormentato Zeus per permettere alla dea di scatenare una tempesta contro l'odiato Eracle di ritorno da Troia. Quando Zeus si era svegliato, furibondo aveva cercato ovunque Hypnos per scagliarlo nel Tartaro, e il dio si era salvato solo fuggendo a rifugiarsi precipitosamente tra le braccia protettive di sua madre Notte."
+      testo: "Tra la moltitudine degli Oneiroi, tre figure emergono con straordinario rilievo mitologico e letterario:"
     },
     {
       tipo: "paragrafo",
-      testo: "Tuttavia, Era non si arrese e offrì a Hypnos un premio irresistibile: la mano di Pasitea, la giovane Grazia che il dio desiderava ardentemente in sposa da lunghissimo tempo. Accecato dall'amore e rassicurato dal giuramento solenne della dea pronunciato sul fiume Stige, Hypnos accettò."
+      testo: "• **Morfeo (Μορφεύς):** Il più potente, celebre e versatile dei figli di Hypnos. Il suo nome deriva dal greco *morphe* (forma). Morfeo è il maestro indiscusso del mutamento d'aspetto: egli possiede la capacità sovrannaturale di penetrare nei sogni dei mortali assumendo le sembianze umane più credibili e veritiere — che si tratti di un congiunto defunto, di un sovrano saggio o di un amante lontano. È lui che modella la materia del sogno umano."
     },
     {
       tipo: "paragrafo",
-      testo: "Volando rapidamente sul monte Ida, Hypnos si trasformò in un piccolo uccello canorificatore — la *chalcis* — e si posò su un alto abete. Da quel ramo, sprigionando tutta la sua potenza soporifera, avvolse Zeus in una nebbia densa e pesante, chiudendo gli occhi al sovrano dell'universo. Con Zeus addormentato, gli Achei poterono finalmente ribaltare le sorti della battaglia, dimostrando come persino la sovranità assoluta degli dèi fosse vulnerabile al potere rigeneratore e incantatore del Sonno."
+      testo: "• **Fobetore (Φοβήτωρ), noto agli dèi come Icelo:** Lo spirito onirico specializzato nel generare gli incubi più terrificanti. Fobetore abbandona le sembianze umane per assumere l'aspetto di animali minacciosi e feroci: sciami di serpenti velenosi, tori furiosi, lupi famelici o uccelli rapaci, terrorizzando il dormiente nel cuore della notte."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "• **Fantaso (Φάσασος):** Il creatore delle visioni fantastiche, bizzarre e inanimate. A differenza dei fratelli, Fantaso popola i sogni di elementi surreali e impossibili nella fisica terrestre: rocce che fluttuano nell'aria, fiumi di fuoco, alberi parlanti e oggetti inanimati che prendono vita, incarnando la dimensione più irreale e allucinatoria dell'inconscio."
+    },
+    {
+      tipo: "sottotitolo",
+      testo: "5. L'inganno supremo a Zeus: Analisi approfondita della Dolonia omerica"
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Il momento di massimo splendore letterario e narrativo in cui Hypnos diventa protagonista assoluto di un evento capace di alterare le sorti della storia umana si trova nel XIV libro dell'Iliade di Omero, un episodio fondamentale noto nella filologia classica come la *Dolonia* o l'inganno di Zeus (Διὸς ἀπάτη)."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "La situazione strategica davanti alle mura di Troia volgeva al peggio per gli Achei (i Greci): il prode Ettore e l'esercito troiano stavano sfondando le linee difensive, minacciando di dare alle fiamme le navi greche. Zeus, tuttavia, seduto sulle cime più alte del monte Ida, sorvegliava severamente lo scontro per assicurarsi che il fato stabilito venisse rispettato, impedendo rigorosamente a qualsiasi divinità di intervenire in favore dei Greci."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Era, dea di Argo e protettrice implacabile degli Achei, compì allora una mossa disperata e di altissima astuzia politica: decise di sedurre il proprio sposo Zeus per poi addormentarlo profondamente, paralizzando la sua sorveglianza e permettendo così agli dèi alleati dei Greci di scendere in campo a ribaltare le sorti della guerra. Per realizzare questo piano folle, Era sapeva di non poter fare a meno di Hypnos."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "La dea si recò personalmente nella dimora del dio del sonno, supplicandolo di intervenire. Inizialmente, Hypnos oppose un rifiuto categorico e spaventato, ricordando a Era un precedente storico estremamente pericoloso: tempo prima, proprio su richiesta di Era, egli aveva già addormentato Zeus per permettere alla dea di scatenare una violenta tempesta marina contro l'odiato Eracle che faceva ritorno da Troia. Quando Zeus si era risvegliato, furibondo come un leone ferito, aveva devastato l'Olimpo alla ricerca del colpevole, e Hypnos si era salvato da una condanna certa nel Tartaro solo fuggendo a precipizio e rifugiandosi tra le braccia protettive di sua madre Notte."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "«Non posso farlo, o dea veneranda», protestava Hypnos. «Ricordo troppo bene l'ira di Zeus. Vuoi forse che io metta a repentaglio la mia immortalità?»"
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Era, tuttavia, abile negoziatrice, non si perse d'animo e mise sul piatto un'offerta che il dio del sonno non poteva rifiutare: gli promise in sposa la giovane e bellissima Pasitea, la Grazia minore che Hypnos desiderava ardentemente in moglie fin dai tempi della sua giovinezza e che non era mai riuscito a conquistare. Rassicurato da questo premio d'amore e vincolato da un giuramento solenne prestato da Era sulle acque inviolabili del fiume Stige, Hypnos accettò finalmente l'incarico."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Volando rapidamente verso il monte Ida, Hypnos si trasformò astutamente in un piccolo uccello notturno arboricolo — la *chalcis* — e si posò silenziosamente sui rami di un alto abete. Da quel punto privilegiato, sprigionando tutta la potenza occulta della sua essenza soporifera, avvolse il re degli dèi in una fitta nebbia invisibile e pesante. Zeus, colpito dal sortilegio, avvertì le palpebre farsi improvvisamente di piombo e cadde in un sonno profondo, abbandonando il controllo dell'universo."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Liberati dalla sorveglianza di Zeus, i Greci — guidati da Aiace e sostenuti da Poseidone — poterono contrattaccare con ferocia, respingendo i Troiani e salvando la flotta. L'episodio dimostra una verità profonda: persino la sovranità assoluta del dio supremo dell'universo non è immune alla forza rigeneratrice, pacificante e livellatrice del Sonno."
+    },
+    {
+      tipo: "sottotitolo",
+      testo: "6. L'eredità culturale e filosofica"
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Nella riflessione dei filosofi presocratici e dei poeti tragici, Hypnos rappresenta la tregua concessa alla fragilità umana. A differenza degli animali, che obbediscono ciecamente agli istinti della natura, l'uomo pensa, soffre, ricorda e progetta, logorandosi nel corso delle veglie prolungate. Il sonno diviene così il baluardo medico e spirituale che impedisce alla mente umana di impazzire sotto il peso soverchiante delle preoccupazioni."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "La figura di Hypnos continua a vivere intatta nella nostra modernità: non solo attraverso i prestiti linguistici diretti come l'ipnosi e le discipline mediche del sonno, ma soprattutto come archetipo universale di quel rifugio interiore in cui ogni essere vivente, ogni singola notte, si ritira per rigenerarsi prima di affrontare le nuove battaglie del giorno."
     }
   ],
-  curiosita: "L'associazione tra il sonno e l'oblio nella figura di Hypnos riflette la concezione greca secondo cui il riposo notturno cancella temporaneamente le fatiche del giorno, fungendo da piccola morte rigeneratrice prima di un nuovo risveglio."
-};
-
-export const thanatos = {
-  id: "thanatos",
-  titolo: "Thanatos",
-  categoria: "Gli Altri Dèi e le Divinità",
-  sommario: "Studio approfondito su Thanatos: la genealogia primordiale, la percezione della morte nella Grecia antica, i miti di Sisifo e Admeto, e il confronto con le Keres.",
-  contenuto: [
-    {
-      tipo: "paragrafo",
-      testo: "Nella cultura della Grecia antica, il concetto di morte non era monolitico, né veniva associato unicamente all'orrore o alla punizione divina. Esistevano diverse divinità e personificazioni legate al trapasso, ma la forma più pura, ineluttabile e naturale della fine della vita trovava il suo volto in Thanatos (Θάνατος). Figlio di Nyx (la Notte) e di Erebo (l'Oscurità) secondo la genealogia esiodea — sebbene la tradizione più arcaica lo dipinga come generato dalla sola Notte, a rimarcare la sua natura originaria e indipendente dagli dèi olimpici —, Thanatos rappresenta la quiete definitiva, il confine oltre il quale le passioni umane si spengono."
-    },
-    {
-      tipo: "paragrafo",
-      testo: "La sua figura si distingue nettamente da quella delle Keres (Κῆρες), le spaventose divinità femminili della morte violenta e loto-fagiche che infuriavano sui campi di battaglia, bramose di sangue, brandendo artigli e strappando le anime dai corpi dei caduti tra urla e strazio. Thanatos, al contrario, non porta segni di violenza: il suo intervento è silenzioso, ordinato e rispettoso del ciclo cosmico stabilito dalle Moire."
-    },
-    {
-      tipo: "sottotitolo",
-      testo: "Genealogia oscura e la simmetria con Hypnos"
-    },
-    {
-      tipo: "paragrafo",
-      testo: "Essendo figlio della Notte, Thanatos appartiene alla stirpe delle potenze primordiali che esistevano ben prima che Zeus salisse al potere sull'Olimpo. Questa collocazione mitologica spiega perché persino gli dèi olimpici nutrisse una sorta di rispetto timoroso nei suoi confronti: la morte è una legge che non risparmia nessuno, e persino gli immortali riconoscevano l'autonomia di questo severo guardiano."
-    },
-    {
-      tipo: "paragrafo",
-      testo: "Il legame simmetrico con il fratello gemello Hypnos (il Sonno) trova riscontro in poesia e filosofia. I Greci chiamavano il sonno 'il fratello minore della morte'. Nell'iconografia vascolare attica, i due fratelli venivano spesso rappresentati come efebi alati che depongono con delicatezza i corpi dei defunti. Tuttavia, mentre Hypnos visita l'uomo periodicamente per donargli sollievo e svanisce al risveglio, Thanatos compie il viaggio di sola andata verso le braccia di Ade e Persefone."
-    },
-    {
-      tipo: "sottotitolo",
-      testo: "L'iconografia: il giovane alato e la torcia rovesciata"
-    },
-    {
-      tipo: "paragrafo",
-      testo: "Contrariamente all'immaginario collettivo moderno che vede nella morte uno scheletro incappucciato con la falce — iconografia sviluppatasi molto più tardi, durante il Medioevo e la peste nera —, l'arte greca classica raffigurava Thanatos con sembianze umane sublimi. Era un giovane uomo dalla bellezza malinconica, spesso barbuto nei rilievi più antichi e sbarbato in quelli di età classica, provvisto di grandi ali nere o brune."
-    },
-    {
-      tipo: "paragrafo",
-      testo: "Il simbolo ricorrente associato a Thanatos era la torcia capovolta (o spenta), metafora visiva della vita umana la cui fiamma si consuma e si rovescia verso il basso. In alcuni sarcofagi romani e greci, viene raffigurato mentre tiene in mano una farfalla (simbolo dell'anima che abbandona la materia) o una chiave, a indicare che le porte dell'aldilà sono state aperte e chiuse definitivamente."
-    },
-    {
-      tipo: "sottotitolo",
-      testo: "Il mito di Sisifo: quando la Terra rimase senza morte"
-    },
-    {
-      tipo: "paragrafo",
-      testo: "Uno dei racconti mitologici più potenti che vede Thanatos protagonista assoluto è la celebre beffa ordita da Sisifo, re di Corinto. Famoso per la sua intelligenza spregiudicata e per aver violato le leggi dell'ospitalità e dell'onestà, Sisifo comprese che la sua ora era giunta quando Zeus inviò Thanatos a reclamarlo."
-    },
-    {
-      tipo: "paragrafo",
-      testo: "Quando la divinità si presentò per incatenarlo con i suoi ceppi mortali, Sisifo finse una colossale curiosità scientifica o ammirazione per quegli strani strumenti, chiedendo a Thanatos di mostrargli come funzionavano. Non appena la Morte si fu distratta, Sisifo le tese un tranello, scattando in avanti e legando strettamente lo stesso Thanatos con le catene che erano destinate a lui."
-    },
-    {
-      tipo: "paragrafo",
-      testo: "Le conseguenze di questo imprigionamento furono catastrofiche per l'ordine cosmico: bloccato nella stanza segreta del palazzo di Sisifo, **Thanatos non poté più mietere alcuna vita**. Sulla Terra si verificò un evento inaudito: le guerre proseguirono con ferocia ma nessun soldato morì; i vecchi, i malati cronici e i moribondi continuarono a trascinare esistenze dolorose nei loro letti senza poter trovare requie; i sacrifici agli dèi cessarono perché nessuno aveva più motivo di temere la fine o di celebrare riti funebri. Zeus, accortosi che l'equilibrio del mondo era stato sovvertito e che gli altari olimpici erano deserti, ordinò ad Ares di intervenire militarmente per liberare Thanatos dalla prigionia e rispedire immediatamente l'insolente Sisifo nel regno sotterraneo."
-    },
-    {
-      tipo: "sottotitolo",
-      testo: "La sconfitta di Thanatos per mano di Eracle"
-    },
-    {
-      tipo: "paragrafo",
-      testo: "Un altro episodio di straordinario spessore drammatico è narrato nel dramma 'Alcesti' di Euripide. Admeto, re di Fere, aveva ottenuto da Apollo il privilegio di sfuggire alla morte a condizione che qualcun altro accettasse di morire al suo posto. Nessuno dei suoi vecchi genitori acconsentì, ma sua moglie Alcesti, mossa da un amore smisurato, si offrì volontaria."
-    },
-    {
-      tipo: "paragrafo",
-      testo: "Quando Thanatos discese per recidere la ciocca di capelli della regina e trascinarla nell'Ade, il palazzo si riempì di disperazione. Per un fortuito caso del destino, in quei giorni di lutto giunse alla reggia l'eroe Eracle. Ignaro del dramma in corso, Eracle fu accolto con generosità da Admeto che nascose il proprio dolore per non violare le sacre leggi dell'ospitalità (la xenia)."
-    },
-    {
-      tipo: "paragrafo",
-      testo: "Quando Eracle scoprì la verità, decise di compiere un gesto folle: si recò di vedetta presso la tomba di Alcesti e attese l'arrivo di Thanatos, che si accingeva a compiere le libagioni sui resti della regina. Ne nacque una lotta titanica e corpo a corpo: l'eroe figlio di Zeus affrontò la Morte a mani nude, stringendola in una morsa di ferro finché Thanatos, impossibilitato a vincere la forza sovrumana dell'avversario, fu costretto a cedere la preda e a rinunciare all'anima di Alcesti, che fu così restituita alla vita."
-    }
-  ],
-  curiosita: "Nella Grecia antica esisteva un vero e proprio tabù linguistico nei confronti di Thanatos: raramente veniva nominato direttamente per evitare di attirare la sua attenzione, preferendo eufemismi come 'il sonno eterno', 'il liberatore' o 'colui che accoglie tutti'."
+  curiosita: "Nelle rappresentazioni vascolari antiche, Hypnos viene spesso raffigurato con un corno colmo di pozioni soporifere o con un ramo di pioppo intinto nelle acque del fiume Lete, con cui sfiora delicatamente le tempie dei mortali."
 };
