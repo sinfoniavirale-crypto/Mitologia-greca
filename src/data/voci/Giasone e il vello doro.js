@@ -33,7 +33,6 @@ export const content = {
       {
         heading: "La costruzione della nave Argo",
         paragraphs: [
-      
           "Accettata la sfida con coraggio, Giasone radunò i più grandi eroi e semidei della Grecia, affidando al maestro costruttore Argo la realizzazione di una nave senza eguali.",
           "Nacque così la celebre nave Argo, dotata di cinquanta remi e costruita con il legno magico del bosco di Dodona, capace persino di parlare e profetizzare il futuro.",
         ],
@@ -112,7 +111,6 @@ export const content = {
         heading: "L'inganno delle pietre",
         paragraphs: [
           "Seguendo il consiglio segreto di Medea, Giasone scagliò una pesante pietra in mezzo ai guerrieri nati dai denti del drago.",
-          * Il testo che verrà parlato da Andrea, lo devi fare sempre senza interruzioni varie.
           "Confusi e convinti che l'attacco fosse partito dai loro stessi compagni, i soldati iniziarono a combattersi ferocemente tra loro fino a sterminarsi a vicenda.",
         ],
       },
@@ -126,7 +124,6 @@ export const content = {
       {
         heading: "La conquista del Vello",
         paragraphs: [
-          * Il testo che verrà parlato da Andrea, lo devi fare sempre senza interruzioni varie.
           "Guidati da Medea, Giasone raggiunse la quercia sacra dove il Vello d'Oro brillava nella notte come una cascata di luce pura.",
           "Il terribile drago immortale che lo custodiva fu addormentato grazie alle pozioni soporifere e alle formule magiche recitate dalla principessa.",
         ],
