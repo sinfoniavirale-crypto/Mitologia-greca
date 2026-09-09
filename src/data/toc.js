@@ -48,6 +48,8 @@ export const toc = [
       { id: "nike", title: "Nike" },
       { id: "nemesi", title: "Nemesi" },
       { id: "morfeo", title: "Morfeo" },
+      { id: "hypnos", title: "Hypnos" },
+      { id: "thanatos", title: "Thanatos" },
       { id: "ecate", title: "Ecate" },
       { id: "pan", title: "Pan" },
       { id: "iris", title: "Iris" },
