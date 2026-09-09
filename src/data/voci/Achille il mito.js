@@ -1,5 +1,5 @@
 export const content = {
-  "achille": {
+  "achille-il-mito": {
     subtitle: "Il rito segreto nel fuoco, il tallone vulnerabile e la scelta tra una vita lunga o la gloria immortale",
     pages: [
       {
