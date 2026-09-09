@@ -68,7 +68,7 @@ export const content = {
       {
         heading: "Il rifiuto sprezzante",
         paragraphs: [
-          * Il testo che verrà parlato da Andrea, lo devi fare sempre senza interruzioni varie.
+  
           "Narciso, tuttavia, indietreggiò con un gesto di repulsione e gelida alterigia, allontanando la ninfa con aspre parole di disprezzo.",
           "Gridò che non si sarebbe mai concesso a nessuno, preferendo morire piuttosto che cedere all'amore di una donna.",
         ],
