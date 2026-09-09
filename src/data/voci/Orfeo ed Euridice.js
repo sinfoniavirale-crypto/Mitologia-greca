@@ -149,6 +149,45 @@ export const content = {
           "La sua testa e la sua lira d'oro furono gettate nel fiume Ebro, continuando a cantare flebilmente il nome di Euridice mentre venivano trascinate verso il mare.",
         ],
       },
+            {
+        heading: "La sepoltura delle membra",
+        paragraphs: [
+          "Le muse, custodi dell'arte e della memoria, raccolsero pietosamente i resti smembrati del poeta e li seppellirono ai piedi del monte Olimpo.",
+          "Si narra che in quel luogo gli usignoli cantassero con una dolcezza superiore a quella di qualsiasi altra regione della terra, in perenne ricordo del maestro della musica.",
+        ],
+      },
+      {
+        heading: "Il dono della lira tra le stelle",
+        paragraphs: [
+          "La splendida lira d'oro di Orfeo fu raccolta dagli dèi e collocata direttamente nella volta celeste, trasformandosi in una delle costellazioni più affascinanti della notte.",
+          "Un tributo eterno all'arte che aveva quasi sconfitto la morte e commosso gli stessi signori dell'oltretomba.",
+        ],
+      },
+      {
+        heading: "L'abbraccio eterno negli Inferi",
+        paragraphs: [
+          "Secondo la leggenda più dolce e consolatoria, l'anima di Orfeo poté finalmente ricongiungersi con quella di Euridice nei campi elisi.",
+          "Lì, liberi dai vincoli del mondo terreno e senza più il timore di voltarsi, i due amanti ripresero a camminare insieme per l'eternità.",
+        ],
+      },
+      {
+        heading: "Il simbolo dell'amore e del dubbio",
+        paragraphs: [
+          "Il mito di Orfeo ed Euridice rimane l'archetipo supremo della fragilità umana di fronte alla speranza e all'impazienza.",
+          "Ci ricorda che la fiducia totale è l'unica via per custodire ciò che amiamo di più.",
+        ],
+      },
+      {
+        heading: "Verso il mito successivo",
+        paragraphs: [
+          "Chiusa la pagina struggente del poeta della Tracia e della sua lira, la nostra esplorazione della Parte VII si sposta verso nuove e affascinanti leggende del mondo classico.",
+          "Siamo pronti per proseguire il nostro viaggio letterario all'interno dell'app.",
+        ],
+      },
+    ],
+  },
+};
+
       * ... [proseguimento delle pagine successive fino a completare la struttura richiesta per Orfeo ed Euridice]
     ]
   }
