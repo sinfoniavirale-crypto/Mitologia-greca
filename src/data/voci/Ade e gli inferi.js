@@ -1,5 +1,5 @@
 export const content = {
-  "ade_inferi": {
+  "ade-e-gli-inferi": {
     subtitle: "Il regno sotterraneo dei morti: fiumi di pianto, giudici implacabili e il silenzio eterno delle ombre",
     pages: [
       {
