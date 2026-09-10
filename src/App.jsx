@@ -3,7 +3,57 @@ import { TextToSpeech } from "@capacitor-community/text-to-speech";
 import { toc, flatToc, getVoce } from "./data/index.js";
 import "./App.css";
 
-function Cover({ onOpen }) {
+// ---------- Persistenza locale (segnalibro + preferiti) ----------
+
+const STORAGE_KEYS = {
+  LAST_READ: "mitologiagreca_lastread",
+  FAVORITES: "mitologiagreca_favorites",
+};
+
+function loadLastRead() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.LAST_READ);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+function saveLastRead(id, pageIndex) {
+  try {
+    localStorage.setItem(STORAGE_KEYS.LAST_READ, JSON.stringify({ id, pageIndex }));
+  } catch {
+    // storage non disponibile: si ignora, l'app continua a funzionare
+  }
+}
+
+function loadFavorites() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.FAVORITES);
+    const parsed = raw ? JSON.parse(raw) : [];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveFavorites(list) {
+  try {
+    localStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(list));
+  } catch {
+    // storage non disponibile: si ignora
+  }
+}
+
+// Rimuove accenti/maiuscole per una ricerca "gentile" (es. "eos" trova "Eōs").
+function normalizeSearch(s) {
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+function Cover({ onOpen, resumeTitle, onResume }) {
   return (
     <div className="cover">
       <div className="cover-frame">
@@ -20,32 +70,118 @@ function Cover({ onOpen }) {
         <button className="cover-button" onClick={onOpen}>
           Apri il libro
         </button>
+        {onResume && (
+          <button className="cover-button cover-button-secondary" onClick={onResume}>
+            Riprendi: {resumeTitle}
+          </button>
+        )}
       </div>
     </div>
   );
 }
 
-function Sommario({ onSelect }) {
+function Sommario({ onSelect, favorites, onToggleFavorite }) {
+  const [query, setQuery] = useState("");
+  const q = normalizeSearch(query.trim());
+
+  const favoritesList = flatToc.filter(
+    (v) => favorites.includes(v.id) && (!q || normalizeSearch(v.title).includes(q))
+  );
+
+  const filteredToc = toc
+    .map((parte) => ({
+      ...parte,
+      voci: parte.voci.filter((v) => !q || normalizeSearch(v.title).includes(q)),
+    }))
+    .filter((parte) => parte.voci.length > 0);
+
   return (
     <div className="page-shell">
       <header className="toc-header">
         <p className="toc-eyebrow">Sommario</p>
         <h1 className="toc-title">Indice del libro</h1>
+        <div className="toc-header-rule" aria-hidden="true" />
       </header>
+
+      <div className="toc-search">
+        <input
+          type="text"
+          inputMode="search"
+          placeholder="Cerca un personaggio, un mito, un luogo…"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="toc-search-input"
+        />
+        {query && (
+          <button
+            type="button"
+            className="toc-search-clear"
+            onClick={() => setQuery("")}
+            aria-label="Cancella ricerca"
+          >
+            ✕
+          </button>
+        )}
+      </div>
+
       <div className="toc-body">
-        {toc.map((parte) => (
-          <section key={parte.part} className="toc-part">
-            <p className="toc-part-label">{parte.part}</p>
-            <h2 className="toc-part-title">{parte.title}</h2>
+        {favoritesList.length > 0 && (
+          <section className="toc-favorites">
+            <p className="toc-part-label">★ Preferiti</p>
+            <h2 className="toc-part-title">I tuoi segnalibri</h2>
             <ul className="toc-list">
-              {parte.voci.map((voce) => (
+              {favoritesList.map((voce) => (
                 <li key={voce.id}>
-                  <button className="toc-entry" onClick={() => onSelect(voce.id, "start")}>
-                    <span className="toc-entry-title">{voce.title}</span>
-                    <span className="toc-entry-dots" aria-hidden="true" />
-                  </button>
+                  <div className="toc-entry-row">
+                    <button className="toc-entry" onClick={() => onSelect(voce.id, "start")}>
+                      <span className="toc-entry-title">{voce.title}</span>
+                      <span className="toc-entry-dots" aria-hidden="true" />
+                    </button>
+                    <button
+                      type="button"
+                      className="toc-star toc-star-active"
+                      onClick={() => onToggleFavorite(voce.id)}
+                      aria-label="Rimuovi dai preferiti"
+                    >
+                      ★
+                    </button>
+                  </div>
                 </li>
               ))}
+            </ul>
+          </section>
+        )}
+
+        {filteredToc.length === 0 && q && (
+          <p className="toc-empty-search">Nessun risultato per "{query}".</p>
+        )}
+
+        {filteredToc.map((parte) => (
+          <section key={parte.part} className="toc-part">
+            <p className="toc-part-label">{parte.title}</p>
+            <h2 className="toc-part-title">{parte.title}</h2>
+            <ul className="toc-list">
+              {parte.voci.map((voce) => {
+                const isFav = favorites.includes(voce.id);
+                return (
+                  <li key={voce.id}>
+                    <div className="toc-entry-row">
+                      <button className="toc-entry" onClick={() => onSelect(voce.id, "start")}>
+                        <span className="toc-entry-title">{voce.title}</span>
+                        <span className="toc-entry-dots" aria-hidden="true" />
+                      </button>
+                      <button
+                        type="button"
+                        className={isFav ? "toc-star toc-star-active" : "toc-star"}
+                        onClick={() => onToggleFavorite(voce.id)}
+                        aria-label={isFav ? "Rimuovi dai preferiti" : "Aggiungi ai preferiti"}
+                      >
+                        {isFav ? "★" : "☆"}
+                      </button>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         ))}
@@ -157,14 +293,26 @@ function flipShadow(angle) {
   return `0 ${10 + 20 * progress}px ${30 + 40 * progress}px rgba(0,0,0,${0.15 + 0.3 * progress})`;
 }
 
-function Voce({ id, startAt, onSelect, onSommario }) {
+function Voce({
+  id,
+  startAt,
+  savedPageIndex,
+  onSelect,
+  onSommario,
+  favorites,
+  onToggleFavorite,
+  onTrackPosition,
+}) {
   const voce = getVoce(id);
   const isChapter = Array.isArray(voce?.body?.pages);
   const totalPages = isChapter ? voce.body.pages.length : 1;
 
-  const [pageIndex, setPageIndex] = useState(
-    isChapter && startAt === "end" ? totalPages - 1 : 0
-  );
+  const [pageIndex, setPageIndex] = useState(() => {
+    if (typeof savedPageIndex === "number" && savedPageIndex >= 0 && savedPageIndex < totalPages) {
+      return savedPageIndex;
+    }
+    return isChapter && startAt === "end" ? totalPages - 1 : 0;
+  });
   const [isSpeaking, setIsSpeaking] = useState(false);
   const autoPlayRef = useRef(false);
 
@@ -186,6 +334,12 @@ function Voce({ id, startAt, onSelect, onSommario }) {
       TextToSpeech.stop().catch(() => {});
     };
   }, [id]);
+
+  // Segnalibro automatico: ogni volta che cambia voce o pagina, si salva.
+  useEffect(() => {
+    onTrackPosition?.(id, pageIndex);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id, pageIndex]);
 
   if (!voce) {
     return (
@@ -345,6 +499,8 @@ function Voce({ id, startAt, onSelect, onSommario }) {
     }
   };
 
+  const isFav = favorites.includes(id);
+
   return (
     <div
       ref={containerRef}
@@ -396,6 +552,15 @@ function Voce({ id, startAt, onSelect, onSommario }) {
           boxShadow: flip.active ? flipShadow(flip.angle) : "none",
         }}
       >
+        <button
+          type="button"
+          className="voce-star"
+          onClick={() => onToggleFavorite(id)}
+          aria-label={isFav ? "Rimuovi dai preferiti" : "Aggiungi ai preferiti"}
+        >
+          {isFav ? "★" : "☆"}
+        </button>
+
         <PageView voce={voce} isChapter={isChapter} pageIndex={pageIndex} totalPages={totalPages} />
 
         <div className={voce.body ? "speak-bar-spacer" : "nav-only-spacer"} />
@@ -425,6 +590,21 @@ export default function App() {
   const [view, setView] = useState("cover"); // cover | toc | voce
   const [currentId, setCurrentId] = useState(null);
   const [startAt, setStartAt] = useState("start");
+  const [favorites, setFavorites] = useState(() => loadFavorites());
+  const [lastRead, setLastRead] = useState(() => loadLastRead());
+
+  const toggleFavorite = (id) => {
+    setFavorites((prev) => {
+      const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
+      saveFavorites(next);
+      return next;
+    });
+  };
+
+  const trackPosition = (id, pageIndex) => {
+    saveLastRead(id, pageIndex);
+    setLastRead({ id, pageIndex });
+  };
 
   const goToSommario = () => setView("toc");
   const openVoce = (id, edge = "start") => {
@@ -433,17 +613,38 @@ export default function App() {
     setView("voce");
   };
 
+  const resumeReading = () => {
+    if (!lastRead) return;
+    setCurrentId(lastRead.id);
+    setStartAt("start");
+    setView("voce");
+  };
+
+  const resumeVoce = lastRead ? getVoce(lastRead.id) : null;
+
   return (
     <div className="book-app">
-      {view === "cover" && <Cover onOpen={goToSommario} />}
-      {view === "toc" && <Sommario onSelect={openVoce} />}
+      {view === "cover" && (
+        <Cover
+          onOpen={goToSommario}
+          resumeTitle={resumeVoce?.title}
+          onResume={resumeVoce ? resumeReading : null}
+        />
+      )}
+      {view === "toc" && (
+        <Sommario onSelect={openVoce} favorites={favorites} onToggleFavorite={toggleFavorite} />
+      )}
       {view === "voce" && (
         <Voce
           key={currentId}
           id={currentId}
           startAt={startAt}
+        savedPageIndex={currentId === lastRead?.id ? lastRead?.pageIndex : undefined}
           onSelect={openVoce}
           onSommario={goToSommario}
+          favorites={favorites}
+          onToggleFavorite={toggleFavorite}
+          onTrackPosition={trackPosition}
         />
       )}
     </div>
