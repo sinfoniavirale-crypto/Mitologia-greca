@@ -1,5 +1,5 @@
 export const content = {
-  "campi_elisi": {
+  "campi-elisi": {
     subtitle: "Il paradiso degli eroi: prati fioriti, sole perpetuo e la quiete beata delle anime elette",
     pages: [
       {
