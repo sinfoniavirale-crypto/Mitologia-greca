@@ -1,5 +1,5 @@
 export const content = {
-  "folgore_di_zeus": {
+  "folgore-di-zeus": {
     subtitle: "L'arma suprema del padre degli dèi: metallo incandescente, tuoni celesti e il fuoco che governa il cosmo",
     pages: [
       {
