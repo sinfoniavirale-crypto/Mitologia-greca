@@ -1,5 +1,5 @@
 export const content = {
-  "mela_doro": {
+  "mela-doro": {
     subtitle: "Il frutto della discordia e del desiderio: le Esperidi, il giudizio di Paride e la caduta di Troia",
     pages: [
       {
