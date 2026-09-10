@@ -1,5 +1,5 @@
 export const content = {
-  "elmo_di_ade": {
+  "elmo-di-ade": {
     subtitle: "L'artefatto dell'invisibilità: ombre impenetrabili, terrore occulto e il dono supremo delle tenebre",
     pages: [
       {
