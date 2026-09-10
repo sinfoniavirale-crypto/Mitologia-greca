@@ -1,5 +1,5 @@
 export const content = {
-  "labirinto_creta": {
+  "labirinto-di-creta": {
     subtitle: "L'opera ingegnosa di Dedalo: corridoi senza uscita, inganni geometrici e il terrore del Minotauro",
     pages: [
       {
