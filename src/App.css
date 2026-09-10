@@ -161,6 +161,19 @@ body {
   box-shadow: 0 0 18px rgba(212, 176, 106, 0.45);
 }
 
+.cover-button-secondary {
+  display: block;
+  margin: 14px auto 0;
+  border-color: rgba(184, 147, 75, 0.5);
+  color: var(--gold);
+  font-size: 12px;
+  padding: 11px 24px;
+  animation-delay: 0.72s;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.4;
+}
+
 @keyframes cover-fade {
   from {
     opacity: 0;
@@ -198,7 +211,7 @@ body {
 
 .toc-header {
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 }
 
 .toc-header::before {
@@ -227,6 +240,93 @@ body {
   height: 1px;
   background: var(--gold);
   margin: 0 auto;
+}
+
+/* ---------- RICERCA ---------- */
+
+.toc-search {
+  position: relative;
+  margin: 0 0 28px;
+}
+
+.toc-search-input {
+  width: 100%;
+  font-family: "Crimson Pro", serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink);
+  background: rgba(184, 147, 75, 0.08);
+  border: none;
+  border-bottom: 1px solid var(--line);
+  padding: 10px 30px 10px 4px;
+}
+
+.toc-search-input::placeholder {
+  color: var(--ink-soft);
+  opacity: 0.6;
+}
+
+.toc-search-input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--gold);
+}
+
+.toc-search-clear {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 15px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.toc-empty-search {
+  color: var(--ink-soft);
+  font-style: italic;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* ---------- PREFERITI ---------- */
+
+.toc-favorites {
+  margin-bottom: 34px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(184, 147, 75, 0.35);
+}
+
+.toc-favorites .toc-part-label {
+  color: var(--gold-bright);
+}
+
+.toc-entry-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toc-entry-row .toc-entry {
+  flex: 1;
+  min-width: 0;
+}
+
+.toc-star {
+  background: none;
+  border: none;
+  font-size: 19px;
+  color: var(--line);
+  cursor: pointer;
+  padding: 6px 4px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.toc-star-active {
+  color: var(--gold);
 }
 
 .toc-part {
@@ -353,17 +453,33 @@ body {
 
 /* ---------- VOCE / PAGINA DI CONTENUTO ---------- */
 
+.voce-star {
+  position: absolute;
+  top: 36px;
+  right: 22px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: var(--gold);
+  cursor: pointer;
+  line-height: 1;
+  z-index: 5;
+  padding: 4px;
+}
+
 .voce-kicker {
   font-size: 13px;
   letter-spacing: 0.06em;
   color: var(--gold);
   margin: 0 0 4px;
+  padding-right: 40px;
 }
 
 .voce-title {
   font-family: "Cinzel", serif;
   font-size: 34px;
   margin: 0 0 6px;
+  padding-right: 40px;
 }
 
 .voce-progress {
@@ -514,4 +630,4 @@ body {
   font-size: 12px;
   letter-spacing: 0.06em;
   color: var(--gold);
-}
+  }
