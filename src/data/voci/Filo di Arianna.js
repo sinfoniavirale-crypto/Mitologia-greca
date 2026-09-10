@@ -1,5 +1,5 @@
 export const content = {
-  "filo_di_arianna": {
+  "filo-di-arianna": {
     subtitle: "Il gomitolo di porpora e astuzia: corridoi oscuri, il Minotauro e la via d'uscita dal labirinto",
     pages: [
       {
