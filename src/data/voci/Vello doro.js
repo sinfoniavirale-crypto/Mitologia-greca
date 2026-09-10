@@ -1,5 +1,5 @@
 export const content = {
-  "vello_doro": {
+  "vello-doro": {
     subtitle: "La pelle regale del montone alato: fulgore di sole, contese dinastiche e la meta degli Argonauti",
     pages: [
       {
