@@ -1,5 +1,5 @@
 export const content = {
-  "tridente_di_poseidone": {
+  "tridente-di-poseidone": {
     subtitle: "L'arma dei flutti e dei terremoti: tre punte d'acciaio, onde titaniche e il dominio sugli abissi",
     pages: [
       {
