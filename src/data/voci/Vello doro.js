@@ -61,7 +61,7 @@ export const content = {
       {
         heading: "L'origine reale basata sulla tecnica",
         paragraphs: [
-          * Gli storici e i geografi antichi ipotizzarono che il mito del Vello d'Oro traesse spunto dalla pratica locale dei popoli della Colchide di usare pelli di montone immerse nei torrenti per raccogliere le pagliuzze d'oro trasportate dalla corrente.",
+          "Gli storici e i geografi antichi ipotizzarono che il mito del Vello d'Oro traesse spunto dalla pratica locale dei popoli della Colchide di usare pelli di montone immerse nei torrenti per raccogliere le pagliuzze d'oro trasportate dalla corrente.",
           "La realtà economica trasfigurata in epopea fantastica.",
         ],
       },
