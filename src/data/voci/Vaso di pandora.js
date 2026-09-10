@@ -1,5 +1,5 @@
 export const content = {
-  "vaso_di_pandora": {
+  "vaso-di-pandora": {
     subtitle: "Il recipiente fatale della curiosità: mali del mondo, speranza sul fondo e il destino dell'umanità",
     pages: [
       {
