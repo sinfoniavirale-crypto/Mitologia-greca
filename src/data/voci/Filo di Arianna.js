@@ -1,4 +1,4 @@
-export const content: Record<string, any> = {
+export const content = {
   "filo_di_arianna": {
     subtitle: "Il gomitolo di porpora e astuzia: corridoi oscuri, il Minotauro e la via d'uscita dal labirinto",
     pages: [
@@ -110,7 +110,7 @@ export const content: Record<string, any> = {
       {
         heading: "Verso vasi di curiosità e mali del mondo",
         paragraphs: [
-          * Lasciati i corridoi di Creta, il nostro percorso si sposta verso un oggetto misterioso che custodisce tutti i segreti e le sofferenze dell'umanità.",
+          "Lasciati i corridoi di Creta, il nostro percorso si sposta verso un oggetto misterioso che custodisce tutti i segreti e le sofferenze dell'umanità.",
           "La prossima tappa ci svela il vaso di Pandora.",
         ],
       },
