@@ -1,4 +1,4 @@
-export content: Record<string, any> = {
+export const content = {
   "vaso_di_pandora": {
     subtitle: "Il recipiente fatale della curiosità: mali del mondo, speranza sul fondo e il destino dell'umanità",
     pages: [
@@ -12,7 +12,7 @@ export content: Record<string, any> = {
       {
         heading: "La pitha cerchiata di mistero",
         paragraphs: [
-          "Nei testi originali antichi, l'oggetto non era propriamente un piccolo vaso (o anfora), ma una grande giara di terracotta chiamata *pithos*, sigillata ermeticamente.",
+          "Nei testi originali antichi, l'oggetto non era propriamente un piccolo vaso (o anfora), ma una grande giara di terracotta chiamata pithos, sigillata ermeticamente.",
           "All'interno di essa gli dèi avevano nascosto tutti i mali possibili: malattie, fatiche, dolori, vecchiezza, guerre e vizi.",
         ],
       },
@@ -47,7 +47,7 @@ export content: Record<string, any> = {
       {
         heading: "La speranza rimasta sul fondo",
         paragraphs: [
-          "All'interno del recipiente chiuso rimase intrappolata un'unica entità: *Elpis*, la speranza, l'unica forza capace di mitigare i dolori inflitti all'uomo.",
+          "All'interno del recipiente chiuso rimase intrappolata un'unica entità: Elpis, la speranza, l'unica forza capace di mitigare i dolori inflitti all'uomo.",
           "Il dono estremo che impedisce all'umanità di sprofondare nella disperazione totale di fronte alle avversità.",
         ],
       },
@@ -96,8 +96,8 @@ export content: Record<string, any> = {
       {
         heading: "L'eco nella letteratura classica",
         paragraphs: [
-          "Esiodo fu il primo a raccontare organicamente il mito nelle sue *Opere e i giorni*, fissando per sempre l'immagine del vaso maledetto.",
-          "La poesia che tramanda i ammonimenti degli antichi.",
+          "Esiodo fu il primo a raccontare organicamente il mito nelle sue Opere e i giorni, fissando per sempre l'immagine del vaso maledetto.",
+          "La poesia che tramanda gli ammonimenti degli antichi.",
         ],
       },
       {
