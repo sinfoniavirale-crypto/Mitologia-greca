@@ -1,4 +1,4 @@
-export const content: Record<string, any> = {
+export const content = {
   "mela_doro": {
     subtitle: "Il frutto della discordia e del desiderio: le Esperidi, il giudizio di Paride e la caduta di Troia",
     pages: [
@@ -19,7 +19,7 @@ export const content: Record<string, any> = {
       {
         heading: "La scritta 'Alla più bella'",
         paragraphs: [
-          "Eris irruppe nel banchetto nuziale e scagliò sul tavolo d'oro una splendida mela proveniente dal giardino delle Esperidi, sulla quale aveva inciso le parole greche *Kallisti* ('Alla più bella').",
+          "Eris irruppe nel banchetto nuziale e scagliò sul tavolo d'oro una splendida mela proveniente dal giardino delle Esperidi, sulla quale aveva inciso le parole greche Kallisti ('Alla più bella').",
           "Un piccolo oggetto capace di accendere immediatamente la vanità e la competizione tra le dee presenti.",
         ],
       },
